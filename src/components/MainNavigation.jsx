@@ -17,7 +17,7 @@ const MainNavigation = () => {
           <NavLink>Our Story </NavLink>
         </li>
         <li>
-          <NavLink>
+          <NavLink style={{ position: "relative" }}>
             Our Work
             <button className="dropdown-button" onClick={dropDownBtnHandler}>
               <motion.svg
@@ -38,8 +38,8 @@ const MainNavigation = () => {
                 />
               </motion.svg>
             </button>
+            <AnimatePresence>{isExpanded && <DropItem />}</AnimatePresence>
           </NavLink>
-          <AnimatePresence>{isExpanded && <DropItem />}</AnimatePresence>
         </li>
         <li>
           <NavLink>Store </NavLink>
