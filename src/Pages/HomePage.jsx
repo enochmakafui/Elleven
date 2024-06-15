@@ -7,8 +7,10 @@ const HomePage = () => {
         <h2>We are a creative agency </h2>
         <h2>building brands that</h2>
         <h2>make a difference</h2>
-        <button className="start-project-btn">Start a Project</button>
-        <button className="see-work-btn">See our work</button>
+        <div className="hero-btn-container">
+          <button className="start-project-btn">Start a Project</button>
+          <button className="see-work-btn">See our work</button>
+        </div>
       </section>
     </main>
   );
