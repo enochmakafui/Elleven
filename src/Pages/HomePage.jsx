@@ -1,4 +1,5 @@
 import LerpCirlce from "../components/LerpCircle";
+import FlowContainer from "../components/FlowContainer";
 const HomePage = () => {
   return (
     <main>
@@ -12,6 +13,7 @@ const HomePage = () => {
           <button className="see-work-btn">See our work</button>
         </div>
       </section>
+      <FlowContainer />
     </main>
   );
 };

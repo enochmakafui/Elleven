@@ -20,7 +20,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   gap: 22.125rem;
-  margin: 0.5rem 6rem;
+  margin: 2rem 6rem 1rem 6rem;
+  border: 1px solid #fff;
+  border-radius: 128px;
+  padding: 0.2rem 2rem;
   /* max-width: 1200px; */
   /* background-color: red; */
 }
@@ -28,7 +31,7 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
-  padding: 1.3rem;
+  /* padding: 1.3rem; */
   gap: 64px;
   font-family:
     SF Pro Display,
@@ -77,11 +80,12 @@ nav ul a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  padding: 1rem 0.8rem;
+  padding: 1.3rem;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: unset;
+  gap: 18px;
   border-radius: 16px;
   border: 1px solid #fff;
   background-color: rgba(18, 18, 18, 0.2);
@@ -91,6 +95,7 @@ nav ul a:hover {
 .drop-item li {
   padding: 0.5rem 1rem;
   border-radius: 10px;
+  text-align: left;
   /* transition: transform 0.3s ease-out; */
 }
 /* .drop-item li:hover {
@@ -154,4 +159,43 @@ nav ul a:hover {
   background-color: rgba(255, 126, 33, 0.5);
   position: absolute;
   pointer-events: none;
+}
+
+.flow-container {
+  overflow: hidden;
+  width: 100%;
+  /* margin-left: -50px; */
+  /* margin-right: -50px; */
+  display: inline-block;
+  /* justify-conte/nt: center; */
+  /* align-items: center; */
+  margin-top: 60px;
+  padding: 2rem 0 2rem 0;
+  transform: rotate(-9.79deg);
+  /* background-color: red; */
+  border-top: 1.045px solid #fff;
+
+  border-bottom: 1.045px solid #fff;
+}
+
+.slider {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.slide {
+  padding: 20px;
+
+  /* background-color: red; */
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 33px;
+  display: flex;
+  gap: 3rem;
+  /* width: 600px; */
+  font-family:
+    SF Pro Display,
+    sans-serif;
+  white-space: nowrap;
 }
