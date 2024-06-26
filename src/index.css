@@ -2,7 +2,14 @@
 @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
 @font-face {
   font-family: "Neue Montreal";
-  src: url(./assets/NeueMontreal-Regular.otf) format("opentype");
+  src: url(./assets/fonts/NeueMontreal-Regular.otf) format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Montreal-bold";
+  src: url(./assets/fonts/NeueMontreal-Bold.otf) format("opentype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -13,14 +20,16 @@ body {
   background-color: #121212;
   color: #fff;
 }
-
+img {
+  width: 100%;
+}
 /* navigation styles */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 22.125rem;
-  margin: 2rem 6rem 1rem 6rem;
+  margin: 2rem 6rem 5rem 6rem;
   border: 1px solid #fff;
   border-radius: 128px;
   padding: 0.2rem 2rem;
@@ -53,15 +62,14 @@ nav ul a {
   text-decoration: none;
   white-space: nowrap;
 }
-nav ul a:hover {
-  border-bottom: 2px solid #fff;
+nav ul .navlinks:hover {
+  color: #ffffffd8;
 }
 
 .start-project {
   background-color: #fff;
   border-radius: 64px;
   font-size: 24px;
-
   padding: 16px 48px;
   color: #121212;
   white-space: nowrap;
@@ -164,38 +172,179 @@ nav ul a:hover {
 .flow-container {
   overflow: hidden;
   width: 100%;
-  /* margin-left: -50px; */
-  /* margin-right: -50px; */
   display: inline-block;
-  /* justify-conte/nt: center; */
-  /* align-items: center; */
   margin-top: 60px;
-  padding: 2rem 0 2rem 0;
+  padding: 1rem 0 1rem 0;
   transform: rotate(-9.79deg);
-  /* background-color: red; */
   border-top: 1.045px solid #fff;
 
   border-bottom: 1.045px solid #fff;
 }
 
 .slider {
-  /* background-color: red; */
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
 .slide {
   padding: 20px;
-
-  /* background-color: red; */
   box-sizing: border-box;
   text-align: center;
   font-size: 33px;
   display: flex;
   gap: 3rem;
-  /* width: 600px; */
   font-family:
     SF Pro Display,
     sans-serif;
   white-space: nowrap;
+}
+
+.carrousel-container {
+  margin: 20rem 0 3rem 0;
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 42rem;
+  position: relative;
+}
+
+.swiper-slide img {
+  width: auto;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 96px;
+  height: 96px;
+  border: none;
+  outline: none;
+  background-color: #ff7e21;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+.swiper-button-prev {
+  left: 120px;
+}
+.swiper-button-next {
+  right: 120px;
+}
+.carrousel-work-btn {
+  text-align: center;
+}
+
+.service h2,
+.client h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 7rem;
+  font-family: "Neue Montreal", sans-serif; /* Apply Neue Montreal */
+}
+.service {
+  position: relative;
+}
+
+.service-img-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 6rem;
+  width: 85%;
+}
+.service-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.service-next-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 96px;
+  height: 96px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.client {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: #121212;
+  margin-top: 9rem;
+  padding: 2rem;
+}
+.client h2 {
+  font-weight: 500;
+  margin: 0;
+  font-size: 72px;
+  font-family: "Neue Montreal", sans-serif;
+  letter-spacing: -1.008px;
+  font-style: normal;
+
+  line-height: 80px; /* 111.111% */
+}
+.client p {
+  font-family: "Neue Montreal", sans-serif; /* Apply Neue Montreal */
+  text-align: center;
+  font-size: 20px;
+}
+.client-img-container {
+  display: grid;
+  grid-template-columns: repeat(3, 137px);
+  align-items: center;
+  gap: 3rem;
+}
+.client-img-container img {
+  object-fit: cover; /* Ensures images cover the area without distortion */
+}
+.freshbay-img {
+  width: 137.271px;
+  height: 131px;
+}
+.securebytes-img {
+  width: 266px;
+  height: 195px;
+}
+
+.rehome-img {
+  width: 187px;
+  height: 115.66px;
+}
+.atl-img {
+  width: 87px;
+  height: 87px;
+}
+.lnugs-img {
+  width: 84.37px;
+  height: 95.808px;
+}
+.navida-img {
+  width: 150px;
+  height: 46.5px;
 }

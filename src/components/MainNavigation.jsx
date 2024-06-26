@@ -14,10 +14,10 @@ const MainNavigation = () => {
       <h1>Elleven</h1>
       <ul>
         <li>
-          <NavLink>Our Story </NavLink>
+          <NavLink className="navlinks">Our Story </NavLink>
         </li>
         <li>
-          <NavLink style={{ position: "relative" }}>
+          <NavLink style={{ position: "relative" }} className="navlinks">
             Our Work
             <button className="dropdown-button" onClick={dropDownBtnHandler}>
               <motion.svg
@@ -42,10 +42,10 @@ const MainNavigation = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink>Store </NavLink>
+          <NavLink className="navlinks">Store </NavLink>
         </li>
         <li>
-          <NavLink>Blog</NavLink>{" "}
+          <NavLink className="navlinks">Blog</NavLink>{" "}
         </li>
         <motion.li
           whileHover={{ scale: 1.1 }}
