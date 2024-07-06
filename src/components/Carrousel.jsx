@@ -1,19 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
 import callCareImage from "../assets/images/call2care.png";
 import menSmileImage from "../assets/images/men-smile.png";
 import menPoseImage from "../assets/images/men-pose.png";
-import {
-  EffectCoverflow,
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 const Images = [callCareImage, menSmileImage, menPoseImage];
 
@@ -22,24 +14,11 @@ const Carrousel = () => {
     <>
       <div className="carrousel-container">
         <Swiper
-          effect={"coverflow"}
-          modules={[
-            EffectCoverflow,
-            Navigation,
-            Pagination,
-            Scrollbar,
-            A11y,
-            Autoplay,
-          ]}
+          modules={[Navigation, Autoplay]}
           spaceBetween={50}
           slidesPerView={1}
           autoplay={{ delay: 3000 }}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-          }}
+          // centeredSlides={true}
           loop={true}
           navigation={{
             prevEl: ".swiper-button-prev",
@@ -53,7 +32,10 @@ const Carrousel = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className="swiper-button-prev">
+        <button
+          className="swiper-button-prev"
+         
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="48"
@@ -83,7 +65,13 @@ const Carrousel = () => {
         </button>
       </div>
       <div className="carrousel-work-btn">
-        <button className="start-project-btn ">See all our works</button>
+        <motion.button
+          className="start-project-btn "
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 500 }}
+        >
+          See all our works
+        </motion.button>
       </div>
     </>
   );

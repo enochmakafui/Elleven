@@ -4,6 +4,12 @@ import Carrousel from "../components/Carrousel";
 import Service from "../components/Service";
 import Client from "../components/Client";
 import Testimonial from "../components/Testimonial";
+import StoreSection from "../components/StoreSection";
+import Insights from "../components/Insights";
+import Articles from "../components/Articles";
+import { motion } from "framer-motion";
+import NewsLetter from "../components/NewsLetter";
+import Footer from "../components/Footer";
 const HomePage = () => {
   return (
     <main>
@@ -13,8 +19,21 @@ const HomePage = () => {
         <h2>building brands that</h2>
         <h2>make a difference</h2>
         <div className="hero-btn-container">
-          <button className="start-project-btn">Let's Talk</button>
-          <button className="see-work-btn">See our work</button>
+          <motion.button
+            className="start-project-btn"
+            whileHover={{ scale: 1.1 }}
+            // eslint-disable-next-line react/no-unescaped-entities
+            transition={{ type: "spring", stiffness: 500 }}
+          >
+            Lets Talk
+          </motion.button>
+          <motion.button
+            className="see-work-btn"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 500 }}
+          >
+            See our work
+          </motion.button>
         </div>
       </section>
       <FlowContainer />
@@ -22,6 +41,11 @@ const HomePage = () => {
       <Service />
       <Client />
       <Testimonial />
+      <StoreSection />
+      <Insights />
+      <Articles/>
+      <NewsLetter />
+      <Footer />
     </main>
   );
 };

@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
-
+import Marquee from "react-fast-marquee";
 const SLIDES = [
   "BRAND STRATEGY & IDENTITY",
   "UI/UX DESIGN",
@@ -10,33 +8,13 @@ const SLIDES = [
 ];
 
 const FlowContainer = () => {
-  const [totalWidth, setTotalWidth] = useState(0);
-  const sliderRef = useRef(null);
-
-  useEffect(() => {
-    if (sliderRef.current) {
-      const sliderWidth = sliderRef.current.scrollWidth / 2; // Half because we are duplicating the slides
-      setTotalWidth(sliderWidth);
-    }
-  }, []);
-
   return (
     <div
       className="flow-container"
       style={{ overflow: "hidden", whiteSpace: "nowrap", display: "flex" }}
     >
-      <motion.div
-        className="slider"
-        ref={sliderRef}
-        initial={{ x: 0 }}
-        animate={{ x: -totalWidth }}
-        transition={{
-          repeat: Infinity,
-          duration: 35,
-          ease: "linear",
-        }}
-      >
-        {SLIDES.concat(SLIDES).map((slide, index) => (
+      <Marquee>
+        {SLIDES.map((slide, index) => (
           <div key={index} className="slide">
             <span>
               <svg
@@ -59,7 +37,7 @@ const FlowContainer = () => {
             {slide}
           </div>
         ))}
-      </motion.div>
+      </Marquee>
     </div>
   );
 };
