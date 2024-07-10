@@ -1,14 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../CSS/Carrousel.css";
 import "swiper/css";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import callCareImage from "../assets/images/call2care.png";
 import menSmileImage from "../assets/images/men-smile.png";
 import menPoseImage from "../assets/images/men-pose.png";
-import { Navigation, Autoplay } from "swiper/modules";
 import ButtonLight from "./ButtonLight";
 
-const Images = [callCareImage, menSmileImage, menPoseImage,callCareImage, menSmileImage, menPoseImage];
+const Images = [callCareImage, menSmileImage, menPoseImage, callCareImage, menSmileImage, menPoseImage];
 
 const Carrousel = () => {
   return (
@@ -16,11 +16,12 @@ const Carrousel = () => {
       <div className="carrousel-container">
         <Swiper
           modules={[Navigation, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={1.5}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 4000 }}
           centeredSlides={true}
           loop={true}
+          speed={2000}
           navigation={{
             prevEl: ".swiper-button-prev",
             nextEl: ".swiper-button-next",
@@ -28,8 +29,16 @@ const Carrousel = () => {
           className="swiper-container"
         >
           {Images.map((image, index) => (
-            <SwiperSlide key={index} className="swiper-slide">
-              <img src={image} alt={`slide ${index}`} />
+            <SwiperSlide key={index}>
+              {({ isActive, isNext, isPrev }) => (
+                <div
+                  className={`swiper-slide ${
+                    isActive ? "swiper-slide-active" : isNext ? "swiper-slide-next" : isPrev ? "swiper-slide-prev" : ""
+                  }`}
+                >
+                  <img src={image} alt={`slide ${index}`} />
+                </div>
+              )}
             </SwiperSlide>
           ))}
         </Swiper>
