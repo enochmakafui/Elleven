@@ -1,4 +1,5 @@
 import cardImage from "../assets/images/card.png";
+import "../CSS/ClientSection.css"
 const Service = () => {
   return (
     <div className="service">

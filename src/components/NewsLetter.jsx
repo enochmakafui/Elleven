@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "../CSS/NewsLetter.css"
 const NewsLetter = () => {
   return (
     <div className="news-letter">
@@ -12,7 +13,6 @@ const NewsLetter = () => {
       <motion.button
         className="subscribe-btn"
         whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 500 }}
       >
         Subscribe{" "}
         <svg

@@ -1,7 +1,8 @@
 import firstImage from "../assets/images/Rectangle 302.png";
 import secondImage from "../assets/images/Rectangle 303.png";
 import thirdImage from "../assets/images/Rectangle 304.png";
-import { motion } from "framer-motion";
+import "../CSS/Store.css";
+import ButtonLight from "./ButtonLight";
 
 const StoreSection = () => {
   return (
@@ -17,15 +18,11 @@ const StoreSection = () => {
         </div>
       </div>
       <div className="store-text">
-        <p>Find the best of picture frames, </p>
-        <p>books and digital assets</p>
-        <motion.button
-          className="store-preview-btn"
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 500 }}
-        >
-          Visit Out Store
-        </motion.button>
+        <div className="store-text-container">
+          <p>Find the best of picture frames, </p>
+          <p>books and digital assets</p>
+        </div>
+        <ButtonLight> Visit Our Store</ButtonLight>
       </div>
     </div>
   );

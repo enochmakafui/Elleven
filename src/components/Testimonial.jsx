@@ -1,9 +1,12 @@
 import AvatarImage from "../assets/images/Ellipse 67.png";
 import { motion } from "framer-motion";
+import "../CSS/Testimonial.css"
 const Testimonial = () => {
   return (
     <div className="testimonial">
       <h2>What our clients say about us</h2>
+      <div className="testimonial-text">
+
       <p>
         Avat and his team did a brilliant job on strategy for my company’s
         marketing and branding efforts which led to a dramatic and sharp
@@ -16,6 +19,7 @@ const Testimonial = () => {
           <p>Jonathan Mensah</p>
           <p className="role">CEO of ReHome Africa</p>
         </div>
+      </div>
       </div>
       <motion.button
         className="next-profile-btn"

@@ -1,9 +1,10 @@
 import athleteImage from "../assets/images/pic.png";
-import { motion } from "framer-motion";
+import "../CSS/Insights.css";
+import ButtonDark from "./ButtonDark";
 
 const Insights = () => {
   return (
-    <div>
+    <div className="insights">
       <h2 className="insight-head">Some insights from us</h2>
 
       <div className="insights-section">
@@ -17,13 +18,10 @@ const Insights = () => {
             fast becoming quite indispensable in the priority of business needs
             globally.
           </p>
-          <motion.button
-            className="read-more-btn"
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 500 }}
-          >
+          <ButtonDark style={{ alignSelf: "flex-start" }}>
+            {" "}
             Read more
-          </motion.button>
+          </ButtonDark>
         </div>
         <img src={athleteImage} alt="an athlete" />
       </div>

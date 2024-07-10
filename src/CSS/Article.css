@@ -1,0 +1,48 @@
+.articles{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    margin: 0 var(--margin-x);
+  }
+  .article-head{
+    font-family:
+      SF Pro Display,
+      sans-serif;
+      font-size: 48px;
+      text-align: center;
+      font-weight: 400;
+      margin-top: var(--head-margin-top);
+  margin-bottom: var(--head-margin-bottom);
+  }
+  .article-items{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    width: 100%;
+    padding: 0;
+
+
+  }
+  .article-items li{
+    transition: all 0.3s ease-in-out;
+  }
+  .article-items li:hover{
+    scale: 1.1;
+  }
+  .article-title{
+    font-family:
+      SF Pro Display,
+      sans-serif;
+      font-size: 24px;
+      font-family: 400;
+      margin-bottom: 5px;
+  
+  }
+  .article-author{
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  

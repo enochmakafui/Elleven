@@ -1,0 +1,77 @@
+
+.service h2,
+.client h2 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Neue Montreal", sans-serif; /* Apply Neue Montreal */
+  margin-top: var(--head-margin-top);
+  margin-bottom: var(--head-margin-bottom);
+}
+.service {
+  position: relative;
+  margin: 0 var(--margin-x);
+}
+
+.service-img-container {
+  position: relative;
+  /* display: inline-block; */
+  /* margin-left: 6rem; */
+  /* width: 85%; */
+}
+.service-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.service-next-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 96px;
+  height: 96px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.client {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: #121212;
+  padding: 97px 298px 97px 299px;
+
+  margin-top: 9rem;
+}
+.client h2 {
+  font-weight: 500;
+  margin: 0;
+  font-size: 72px;
+  font-family: "Neue Montreal", sans-serif;
+  letter-spacing: -1.008px;
+  font-style: normal;
+
+  line-height: 80px; /* 111.111% */
+}
+.client p {
+  font-family: "Neue Montreal", sans-serif; /* Apply Neue Montreal */
+  text-align: center;
+  font-size: 20px;
+}
+.client-img-container {
+  display: grid;
+  grid-template-columns: repeat(3, 137px);
+  align-items: center;
+  gap: 3rem;
+}
+.client-img-container img {
+  object-fit: cover; 
+}

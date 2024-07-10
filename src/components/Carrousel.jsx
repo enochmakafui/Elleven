@@ -1,13 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { motion } from "framer-motion";
+import "../CSS/Carrousel.css";
 import "swiper/css";
 
 import callCareImage from "../assets/images/call2care.png";
 import menSmileImage from "../assets/images/men-smile.png";
 import menPoseImage from "../assets/images/men-pose.png";
 import { Navigation, Autoplay } from "swiper/modules";
+import ButtonLight from "./ButtonLight";
 
-const Images = [callCareImage, menSmileImage, menPoseImage];
+const Images = [callCareImage, menSmileImage, menPoseImage,callCareImage, menSmileImage, menPoseImage];
 
 const Carrousel = () => {
   return (
@@ -15,10 +16,10 @@ const Carrousel = () => {
       <div className="carrousel-container">
         <Swiper
           modules={[Navigation, Autoplay]}
-          spaceBetween={50}
-          slidesPerView={1}
+          spaceBetween={100}
+          slidesPerView={1.5}
           autoplay={{ delay: 3000 }}
-          // centeredSlides={true}
+          centeredSlides={true}
           loop={true}
           navigation={{
             prevEl: ".swiper-button-prev",
@@ -32,10 +33,7 @@ const Carrousel = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button
-          className="swiper-button-prev"
-         
-        >
+        <button className="swiper-button-prev">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="48"
@@ -65,13 +63,7 @@ const Carrousel = () => {
         </button>
       </div>
       <div className="carrousel-work-btn">
-        <motion.button
-          className="start-project-btn "
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 500 }}
-        >
-          See all our works
-        </motion.button>
+        <ButtonLight> See all our works</ButtonLight>
       </div>
     </>
   );

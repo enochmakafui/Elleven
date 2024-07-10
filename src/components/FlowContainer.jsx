@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import "../CSS/FlowSlider.css"
 const SLIDES = [
   "BRAND STRATEGY & IDENTITY",
   "UI/UX DESIGN",

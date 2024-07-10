@@ -1,0 +1,59 @@
+.insights{
+  margin: 0 var(--margin-x);
+}
+.insight-head{
+    font-size: 48px;
+    font-family:
+    SF Pro Display,
+    sans-serif;
+    text-align: center;
+    font-weight: 400;
+    margin-top: var(--head-margin-top);
+  margin-bottom: var(--head-margin-bottom);
+  }
+  .insights-section{
+    display: flex;
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    justify-content: space-evenly;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    border-radius: 25px;
+    /* margin: 2rem 6rem; */
+    color: #121212;
+    align-items: center;
+    gap:16px;
+  }
+  .article-about{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex-basis: 60%;
+  
+  }
+  .insights img{
+    flex-basis: 40%;;
+  }
+  .article-about .title{
+    font-size: 66.116px;
+    font-family: "Neue Montreal-bold";
+    margin: 0;
+  }
+  .article-about .description{
+    margin-top: 0;
+  }
+  .read-more-btn{
+    background-color: #121212;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 64px;
+    font-size: 24px;
+    font-family:
+      SF Pro Display,
+      sans-serif;
+      padding: 20px 48px;
+  
+    align-self: flex-start;
+  }

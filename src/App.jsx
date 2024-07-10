@@ -7,11 +7,6 @@ import StorePage from "./Pages/StorePage";
 import StartProjectPage from "./Pages/StartProjectPage";
 import BlogPage from "./Pages/BlogPage";
 
-//Todos 
-//1.work on carrousel image with react swiper
-//
-
-
 const router = createBrowserRouter([
   {
     path: "/",

@@ -1,7 +1,9 @@
+import "../CSS/Article.css"
 import firstImage from "../assets/images/Rectangle 306 (2).png";
 import secondImage from "../assets/images/Rectangle 306 (3).png";
 import thirdImage from "../assets/images/Rectangle 306 (4).png";
 import fouthImage from "../assets/images/Rectangle 306 (5).png";
+
 
 const Articles = () => {
 return (

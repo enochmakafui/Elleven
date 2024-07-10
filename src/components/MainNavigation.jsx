@@ -2,6 +2,8 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import DropItem from "./DropItem";
+import "../CSS/Nav.css"
+import ButtonLight from "./ButtonLight";
 
 const MainNavigation = () => {
   const [isExpanded, setExpanded] = useState(false);
@@ -47,12 +49,7 @@ const MainNavigation = () => {
         <li>
           <NavLink className="navlinks">Blog</NavLink>{" "}
         </li>
-        <motion.li
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 500 }}
-        >
-          <NavLink className="start-project">Start a Project</NavLink>
-        </motion.li>
+       <ButtonLight>Start a Project</ButtonLight>
       </ul>
     </nav>
   );

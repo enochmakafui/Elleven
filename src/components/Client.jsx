@@ -4,7 +4,7 @@ import securebytesImage from "../assets/images/securebytes.png";
 import rehomeImage from "../assets/images/rehome.png";
 import atlImage from "../assets/images/atl.png";
 import lnugsImage from "../assets/images/lnugs.png";
-
+import "../CSS/ClientSection.css"
 const Client = () => {
   return (
     <div className="client">
