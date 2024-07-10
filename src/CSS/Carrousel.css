@@ -46,10 +46,10 @@
     cursor: pointer;
   }
   .swiper-button-prev {
-    left: 120px;
+    left: 280px;
   }
   .swiper-button-next {
-    right: 120px;
+    right: 280px;
   }
   .carrousel-work-btn {
     text-align: center;

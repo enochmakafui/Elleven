@@ -16,7 +16,7 @@ const Carrousel = () => {
       <div className="carrousel-container">
         <Swiper
           modules={[Navigation, Autoplay]}
-          spaceBetween={100}
+          spaceBetween={30}
           slidesPerView={1.5}
           autoplay={{ delay: 3000 }}
           centeredSlides={true}
