@@ -1,20 +1,61 @@
-import { motion } from "framer-motion";
+import { motion, MotionContext } from "framer-motion";
+import { useState, useEffect } from "react";
 import "../CSS/Hero.css";
 import ButtonLight from "./ButtonLight";
 import ButtonDark from "./ButtonDark";
+
 const Hero = () => {
+  const [isVisible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
+
   return (
-    <motion.div>
+    <div>
       <section className="hero">
-        <h2>We are a creative agency</h2>
-        <h2>building brands that</h2>
-        <h2>make a difference</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
+          className="hero-heading"
+        >
+          We are a creative agency
+        </motion.h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.4 }}
+          className="hero-heading"
+        >
+          building brands that
+        </motion.h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.5, ease: "easeInOut", delay: 0.6 }}
+          className="hero-heading"
+        >
+          make a difference
+        </motion.h2>
         <div className="hero-btn-container">
-          <ButtonLight>Lets Talk</ButtonLight>
-          <ButtonDark>See our work</ButtonDark>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 0.8 }}
+          >
+            <ButtonLight>Let's Talk</ButtonLight>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5, ease: "easeInOut", delay: 1 }}
+          >
+            <ButtonDark>See our work</ButtonDark>
+          </motion.div>
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 };
 

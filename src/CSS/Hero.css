@@ -10,6 +10,7 @@
   }
   .hero-btn-container {
     margin-top: 90px;
+    display: flex;
   }
   .light-btn {
     background-color: #fff;

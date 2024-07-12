@@ -1,4 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import "../CSS/Carrousel.css";
 import "swiper/css";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -8,12 +10,54 @@ import menSmileImage from "../assets/images/men-smile.png";
 import menPoseImage from "../assets/images/men-pose.png";
 import ButtonLight from "./ButtonLight";
 
-const Images = [callCareImage, menSmileImage, menPoseImage, callCareImage, menSmileImage, menPoseImage];
+const Images = [
+  callCareImage,
+  menSmileImage,
+  menPoseImage,
+  callCareImage,
+  menSmileImage,
+  menPoseImage,
+];
 
 const Carrousel = () => {
+  const carrouselRef = useRef(null);
+  const btnRef = useRef(null);
+  const CarrousselInView = useInView(carrouselRef, {
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const btnInView = useInView(btnRef, { triggerOnce: true, threshold: 0.1 });
+
+  const [carrouselVisible, setCarrouselVisible] = useState(false);
+  const [buttonVisible, setButtonVisible] = useState(false);
+
+  useEffect(() => {
+    if (CarrousselInView) {
+      setCarrouselVisible(true);
+    }
+  }, [CarrousselInView]);
+
+  useEffect(() => {
+    if (btnInView) {
+      setButtonVisible(true);
+    }
+  }, [btnInView]);
+
+  const variants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <>
-      <div className="carrousel-container">
+      <motion.div
+        className="carrousel-container"
+        ref={carrouselRef}
+        initial="hidden"
+        animate={carrouselVisible ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 0.5 }}
+      >
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
@@ -33,7 +77,13 @@ const Carrousel = () => {
               {({ isActive, isNext, isPrev }) => (
                 <div
                   className={`swiper-slide ${
-                    isActive ? "swiper-slide-active" : isNext ? "swiper-slide-next" : isPrev ? "swiper-slide-prev" : ""
+                    isActive
+                      ? "swiper-slide-active"
+                      : isNext
+                      ? "swiper-slide-next"
+                      : isPrev
+                      ? "swiper-slide-prev"
+                      : ""
                   }`}
                 >
                   <img src={image} alt={`slide ${index}`} />
@@ -70,10 +120,17 @@ const Carrousel = () => {
             />
           </svg>
         </button>
-      </div>
-      <div className="carrousel-work-btn">
+      </motion.div>
+      <motion.div
+        className="carrousel-work-btn"
+        ref={btnRef}
+        initial="hidden"
+        animate={buttonVisible ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 0.5 }}
+      >
         <ButtonLight> See all our works</ButtonLight>
-      </div>
+      </motion.div>
     </>
   );
 };

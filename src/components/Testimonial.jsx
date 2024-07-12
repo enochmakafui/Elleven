@@ -1,31 +1,82 @@
+import { useState, useEffect, useRef } from "react";
 import AvatarImage from "../assets/images/Ellipse 67.png";
-import { motion } from "framer-motion";
-import "../CSS/Testimonial.css"
+import { motion, useInView } from "framer-motion";
+import "../CSS/Testimonial.css";
 const Testimonial = () => {
-  return (
-    <div className="testimonial">
-      <h2>What our clients say about us</h2>
-      <div className="testimonial-text">
+  const testimonialRef = useRef(null);
+  const btnRef = useRef(null);
+  const [testimonialVisible, setTestimonialVisible] = useState(null);
+  const [btnVisible, setBtnVisible] = useState(null);
 
-      <p>
-        Avat and his team did a brilliant job on strategy for my company’s
-        marketing and branding efforts which led to a dramatic and sharp
-        increase in sales as well as a first round pre-seed funding of 20,000
-        USD
-      </p>
-      <div className="profile">
-        <img src={AvatarImage} alt="profile image" />
-        <div className="profile-about">
-          <p>Jonathan Mensah</p>
-          <p className="role">CEO of ReHome Africa</p>
-        </div>
-      </div>
-      </div>
-      <motion.button
-        className="next-profile-btn"
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring", stiffness: 500 }}
+  const testimonialInView = useInView(testimonialRef, {
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const btnInview = useInView(btnRef, {
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (testimonialInView) {
+      setTestimonialVisible(true);
+    }
+  }, [testimonialInView]);
+
+  useEffect(() => {
+    if (btnInview) {
+      setBtnVisible(true);
+    }
+  }, [btnInview]);
+
+  return (
+    <motion.div className="testimonial">
+      <motion.h2
+        ref={testimonialRef}
+        initial="hidden"
+        animate={testimonialVisible ? "visible" : "hidden"}
+        variants={{
+          hidden: { opacity: 0, x: 100 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        transition={{ duration: 0.5 }}
       >
+        What our clients say about us
+      </motion.h2>
+      <div className="testimonial-text">
+        <motion.p
+          initial="hidden"
+          animate={testimonialVisible ? "visible" : "hidden"}
+          variants={{
+            hidden: { opacity: 0, y: 100 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Avat and his team did a brilliant job on strategy for my company’s
+          marketing and branding efforts which led to a dramatic and sharp
+          increase in sales as well as a first round pre-seed funding of 20,000
+          USD
+        </motion.p>
+        <motion.div
+          className="profile"
+          ref={btnRef}
+          initial="hidden"
+          animate={btnVisible ? "visible" : "hidden"}
+          variants={{
+            hidden: { opacity: 0, y: 100 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          <img src={AvatarImage} alt="profile image" />
+          <div className="profile-about">
+            <p>Jonathan Mensah</p>
+            <p className="role">CEO of ReHome Africa</p>
+          </div>
+        </motion.div>
+      </div>
+      <motion.button className="next-profile-btn" whileHover={{ scale: 1.1 }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="48"
@@ -39,7 +90,7 @@ const Testimonial = () => {
           />
         </svg>
       </motion.button>
-    </div>
+    </motion.div>
   );
 };
 

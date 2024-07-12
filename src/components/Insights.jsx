@@ -1,13 +1,45 @@
+import { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import athleteImage from "../assets/images/pic.png";
 import "../CSS/Insights.css";
 import ButtonDark from "./ButtonDark";
 
 const Insights = () => {
-  return (
-    <div className="insights">
-      <h2 className="insight-head">Some insights from us</h2>
+  const ref = useRef(null);
+  const [containerVisible, setContainerVisible] = useState(false);
+  const containerInView = useInView(ref, { triggerOnce: true, threshold: 0.1 });
 
-      <div className="insights-section">
+  useEffect(() => {
+    if (containerInView) {
+      setContainerVisible(true);
+    }
+  }, [containerInView]);
+
+  const variants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <motion.div className="insights">
+      <motion.h2
+        ref={ref}
+        className="insight-head"
+        initial="hidden"
+        animate={containerVisible ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 0.5 }}
+      >
+        Some insights from us
+      </motion.h2>
+
+      <motion.div
+        className="insights-section"
+        initial="hidden"
+        animate={containerVisible ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
         <div className="article-about">
           <p>Article by Richmond Aryeh | 2024</p>
           <p className="title">
@@ -24,8 +56,8 @@ const Insights = () => {
           </ButtonDark>
         </div>
         <img src={athleteImage} alt="an athlete" />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
