@@ -1,30 +1,27 @@
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-const LerpCirlce = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      setPosition({ x: event.clientX, y: event.clientY });
-    };
+import AnimatedCursor from "react-animated-cursor";
 
-    document.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
+const LerpCircle = () => {
   return (
-    <div className="lerp-container">
-      <motion.div
-        className="lerp-circle"
-        style={{
-          top: position.y - 25,
-          left: position.x - 25,
+    <div>
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={30}
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={2}
+        hasBlendMode={true}
+        outerStyle={{
+          background: "var(--cursor-color)",
+          mixBlendMode: "exclusion",
         }}
-      ></motion.div>
+        innerStyle={{
+          border: "1px solid var(--cursor-color)",
+          background: "var(--cursor-color)",
+          mixBlendMode: "difference",
+        }}
+      />
     </div>
   );
 };
 
-export default LerpCirlce;
+export default LerpCircle;

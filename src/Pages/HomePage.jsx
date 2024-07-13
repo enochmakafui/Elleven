@@ -23,7 +23,6 @@ const HomePage = () => {
       <StoreSection />
       <Insights />
       <Articles />
-
       <NewsLetter />
       <Footer />
     </main>

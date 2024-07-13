@@ -12,30 +12,3 @@
     margin-top: 90px;
     display: flex;
   }
-  .light-btn {
-    background-color: #fff;
-    border: none;
-    outline: none;
-    margin-right: 1.5rem;
-    border-radius: 64px;
-    font-size: 24px;
-    font-family:
-      SF Pro Display,
-      sans-serif;
-    padding: 20px 48px;
-    color: #121212;
-    white-space: nowrap;
-  }
-  
-  .dark-btn {
-    outline: none;
-    font-size: 24px;
-    font-family:
-      SF Pro Display,
-      sans-serif;
-    padding: 20px 48px;
-    background-color: #121212;
-    border-radius: 64px;
-    border-color: #fff;
-    color: #fff;
-  }

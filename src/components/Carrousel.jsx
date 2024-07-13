@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+
 import "../CSS/Carrousel.css";
 import "swiper/css";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -61,8 +62,8 @@ const Carrousel = () => {
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
-          slidesPerView={1.5}
-          autoplay={{ delay: 4000 }}
+          slidesPerView={1.7}
+          autoplay={{ delay: 3000 }}
           centeredSlides={true}
           loop={true}
           speed={2000}

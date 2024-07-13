@@ -47,7 +47,7 @@ const Client = () => {
 
   return (
     <div className="client">
-      <div>
+      <div >
         <motion.h2
           ref={h2Ref}
           initial="hidden"
@@ -68,60 +68,72 @@ const Client = () => {
         </motion.p>
       </div>
       <motion.div ref={imageContainerRef} className="client-img-container">
-        <motion.img
-          src={freshbayImage}
-          alt="freshbay logo"
-          className="freshbay-img"
-          initial="hidden"
-          animate={imageContainerVisible ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 0.5}}
-        />
-        <motion.img
-          src={securebytesImage}
-          alt="securebytes logo"
-          className="securebytes-img"
-          initial="hidden"
-          animate={imageContainerVisible ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        />
-        <motion.img
-          src={rehomeImage}
-          alt="rehome logo"
-          className="rehome-img"
-          initial="hidden"
-          animate={imageContainerVisible ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        />
-        <motion.img
-          src={atlImage}
-          alt="atlantic hall logo"
-          className="atl-img"
-          initial="hidden"
-          animate={imageContainerVisible ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        />
-        <motion.img
-          src={lnugsImage}
-          alt="lnugs logo"
-          className="lnugs-img"
-          initial="hidden"
-          animate={imageContainerVisible ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 0.5, delay: 0.8 }}
-        />
-        <motion.img
-          src={pngwingImage}
-          alt="navida logo"
-          className="navida-img"
-          initial="hidden"
-          animate={imageContainerVisible ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 0.5, delay: 1 }}
-        />
+        <div className="image-box">
+          <motion.img
+            src={freshbayImage}
+            alt="freshbay logo"
+            className="freshbay-img"
+            initial="hidden"
+            animate={imageContainerVisible ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5 }}
+          />
+        </div>
+        <div className="image-box">
+          <motion.img
+            src={securebytesImage}
+            alt="securebytes logo"
+            className="securebytes-img"
+            initial="hidden"
+            animate={imageContainerVisible ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          />
+        </div>
+        <div className="image-box"> 
+          <motion.img
+            src={rehomeImage}
+            alt="rehome logo"
+            className="rehome-img"
+            initial="hidden"
+            animate={imageContainerVisible ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          />
+        </div>
+        <div className="image-box">
+          <motion.img
+            src={atlImage}
+            alt="atlantic hall logo"
+            className="atl-img"
+            initial="hidden"
+            animate={imageContainerVisible ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          />
+        </div>
+        <div className="image-box">
+          <motion.img
+            src={lnugsImage}
+            alt="lnugs logo"
+            className="lnugs-img"
+            initial="hidden"
+            animate={imageContainerVisible ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          />
+        </div>
+        <div className="image-box">
+          <motion.img
+            src={pngwingImage}
+            alt="navida logo"
+            className="navida-img"
+            initial="hidden"
+            animate={imageContainerVisible ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: 0.5, delay: 1 }}
+          />
+        </div>
       </motion.div>
     </div>
   );

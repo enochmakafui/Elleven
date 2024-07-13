@@ -39,38 +39,72 @@
   --margin-x:6rem;
   --head-margin-top:4.5rem ;
   --head-margin-bottom:4.5rem ;
+  --cursor-color:#fff;
+}
+*{
+  cursor: none;
 }
 body {
   margin: 0;
   padding: 0;
   background-color: #121212;
   color: #fff;
-
+  position: relative;
 }
+
 img {
   width: 100%;
 }
+.light-btn {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  margin-right: 1.5rem;
+  border-radius: 64px;
+  font-size: 24px;
+  font-family:
+    SF Pro Display,
+    sans-serif;
+  padding: 20px 48px;
+  color: #121212;
+  white-space: nowrap;
+}
+
+.dark-btn {
+  outline: none;
+  font-size: 24px;
+  font-family:
+    SF Pro Display,
+    sans-serif;
+  padding: 20px 48px;
+  background-color: #121212;
+  border-radius: 64px;
+  border-color: #fff;
+  color: #fff;
+}
 
 /* lerp circle */
-.lerp-container {
-  position: "relative";
-  width: "100vw";
-  height: "100vh";
-}
+
+
 .lerp-circle {
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background-color: rgba(255, 126, 33, 0.5);
-  position: absolute;
+  opacity:0.6;
+  background-color: #FF7E21;
   pointer-events: none;
+  position: fixed;
+  z-index: 1000;
+  top:0;
+  left: 0;
+  /* mix-blend-mode: overlay; */
+
 }
 /* footer */
 .footer{
   display: grid;
   grid-template-columns: 2fr 1fr 1fr ;
   gap:8rem;
-  /* padding: 15rem 5rem 3rem 5rem ; */
   margin: 5rem var(--margin-x);
 }
 .about-elleven h2{

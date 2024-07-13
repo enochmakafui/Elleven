@@ -2,15 +2,18 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import DropItem from "./DropItem";
-import "../CSS/Nav.css"
+import "../CSS/Nav.css";
 import ButtonLight from "./ButtonLight";
 
 const MainNavigation = () => {
   const [isExpanded, setExpanded] = useState(false);
 
-  const dropDownBtnHandler = () => {
-    setExpanded(!isExpanded);
+  const dropDownYes = () => {
+    setExpanded(true);
   };
+  const dropDownNo = () =>{
+    setExpanded(false)
+  }
   return (
     <nav>
       <h1>Elleven</h1>
@@ -19,9 +22,9 @@ const MainNavigation = () => {
           <NavLink className="navlinks">Our Story </NavLink>
         </li>
         <li>
-          <NavLink style={{ position: "relative" }} className="navlinks">
+          <NavLink style={{ position: "relative" }} className="navlinks" onMouseOver={dropDownYes} onMouseLeave={dropDownNo}>
             Our Work
-            <button className="dropdown-button" onClick={dropDownBtnHandler}>
+            <button className="dropdown-button" >
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -49,7 +52,13 @@ const MainNavigation = () => {
         <li>
           <NavLink className="navlinks">Blog</NavLink>{" "}
         </li>
-       <ButtonLight>Start a Project</ButtonLight>
+        <ButtonLight 
+          style={
+            {
+              padding: "10px 20px",
+            }
+          }
+        >Start a Project</ButtonLight>
       </ul>
     </nav>
   );
