@@ -11,12 +11,12 @@ const LerpCircle = () => {
         outerScale={2}
         hasBlendMode={true}
         outerStyle={{
-          background: "var(--cursor-color)",
+          background: "#fff",
           mixBlendMode: "exclusion",
         }}
         innerStyle={{
-          border: "1px solid var(--cursor-color)",
-          background: "var(--cursor-color)",
+          border: "1px solid #fff",
+          background: " #fff",
           mixBlendMode: "difference",
         }}
       />

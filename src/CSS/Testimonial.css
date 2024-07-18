@@ -15,9 +15,6 @@
   .testimonial-text{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* background-color: #ff7e21; */
     width:80%;
     align-self: center;
     justify-self: center;
@@ -25,11 +22,8 @@
   }
   .testimonial p{
     font-size: 48px;
-    /* text-align: center; */
     font-weight: 400;
-    
-    /* width: 80%; */
-  
+    text-align: justify;
   }
   .testimonial .profile{
     display: flex;
