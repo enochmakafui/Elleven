@@ -1,4 +1,3 @@
-import LerpCirlce from "../components/LerpCircle";
 import Hero from "../components/Hero";
 import FlowContainer from "../components/FlowContainer";
 import Carrousel from "../components/Carrousel";
@@ -13,7 +12,6 @@ import Footer from "../components/Footer";
 const HomePage = () => {
   return (
     <main>
-      <LerpCirlce />
       <Hero />
       <FlowContainer />
       <Carrousel />

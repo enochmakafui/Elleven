@@ -1,6 +1,6 @@
 import AnimatedCursor from "react-animated-cursor";
 
-const LerpCircle = () => {
+const AnimateCursor= () => {
   return (
     <div>
       <AnimatedCursor
@@ -9,14 +9,12 @@ const LerpCircle = () => {
         outerAlpha={0.2}
         innerScale={0.7}
         outerScale={2}
-        hasBlendMode={true}
         outerStyle={{
-          background: "#fff",
           mixBlendMode: "exclusion",
+          backgroundColor: "#fff",
         }}
         innerStyle={{
-          border: "1px solid #fff",
-          background: " #fff",
+          backgroundColor: "#fff",
           mixBlendMode: "difference",
         }}
       />
@@ -24,4 +22,4 @@ const LerpCircle = () => {
   );
 };
 
-export default LerpCircle;
+export default AnimateCursor ;

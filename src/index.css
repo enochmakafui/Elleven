@@ -5,32 +5,27 @@
   src: url(./assets/fonts/NeueMontreal-Regular.otf) format("opentype");
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Neue Montreal-bold";
   src: url(./assets/fonts/NeueMontreal-Bold.otf) format("opentype");
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "PP Editorial New-Italic";
   src: url(./assets/fonts/PPEditorialNew-Italic-BF644b214fb0c0a.otf) format("opentype");
-  font-display: swap;
   font-style: normal;
 
 }
 @font-face {
   font-family: "PP Editorial New";
   src: url(./assets/fonts/PPEditorialNew-Regular-BF644b214ff145f.otf) format("opentype");
-  font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica Neue";
   src: url(./assets/fonts/HelveticaNeueLight.otf) format("opentype");
-  font-display: swap;
   font-style: normal;
 }
 :root{
