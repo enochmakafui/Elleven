@@ -11,20 +11,27 @@ const MainNavigation = () => {
   const dropDownYes = () => {
     setExpanded(true);
   };
-  const dropDownNo = () =>{
-    setExpanded(false)
-  }
+  const dropDownNo = () => {
+    setExpanded(false);
+  };
   return (
     <nav>
-      <h1>Elleven</h1>
+      <h1>
+        <NavLink to="/"> Elleven</NavLink>
+      </h1>
       <ul>
         <li>
           <NavLink className="navlinks">Our Story </NavLink>
         </li>
         <li>
-          <NavLink style={{ position: "relative" }} className="navlinks" onMouseOver={dropDownYes} onMouseLeave={dropDownNo}>
+          <NavLink
+            style={{ position: "relative" }}
+            className="navlinks"
+            onMouseOver={dropDownYes}
+            onMouseLeave={dropDownNo}
+          >
             Our Work
-            <button className="dropdown-button" >
+            <button className="dropdown-button">
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -52,13 +59,17 @@ const MainNavigation = () => {
         <li>
           <NavLink className="navlinks">Blog</NavLink>{" "}
         </li>
-        <ButtonLight 
-          style={
-            {
-              padding: "10px 20px",
-            }
-          }
-        >Start a Project</ButtonLight>
+        <li>
+          <NavLink to="/start-project">
+            <ButtonLight
+              style={{
+                padding: "10px 20px",
+              }}
+            >
+              Start a Project
+            </ButtonLight>
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

@@ -8,7 +8,6 @@ import StoreSection from "../components/StoreSection";
 import Insights from "../components/Insights";
 import Articles from "../components/Articles";
 import NewsLetter from "../components/NewsLetter";
-import Footer from "../components/Footer";
 const HomePage = () => {
   return (
     <main>
@@ -22,7 +21,6 @@ const HomePage = () => {
       <Insights />
       <Articles />
       <NewsLetter />
-      <Footer />
     </main>
   );
 };

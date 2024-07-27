@@ -44,7 +44,7 @@ const Footer = () => {
       </div>
       <ul className="about">
         <p>About Elleven</p>
-        <li>Comapany</li>
+        <li>Company</li>
         <li>Teams</li>
         <li>Our Values</li>
         <li>Twitter</li>
