@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import DropItem from "./DropItem";
 import "../CSS/Nav.css";
 import ButtonLight from "./ButtonLight";
+import ButtonDark from "./ButtonDark";
 
 const MainNavigation = () => {
   const [isExpanded, setExpanded] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const dropDownYes = () => {
     setExpanded(true);
@@ -14,8 +16,24 @@ const MainNavigation = () => {
   const dropDownNo = () => {
     setExpanded(false);
   };
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav>
+    <nav className={scrolled ? "scrolled" : ""}>
       <h1>
         <NavLink to="/"> Elleven</NavLink>
       </h1>
@@ -38,12 +56,12 @@ const MainNavigation = () => {
                 height="25"
                 viewBox="0 0 24 25"
                 fill="none"
-                className="dropdown-icon"
+                className= "dropdown-icon"
                 animate={{ rotate: isExpanded ? 180 : 0 }}
               >
                 <path
                   d="M18 10.5L12 16.5L6 10.5"
-                  stroke="white"
+                  stroke={scrolled?"black":"white"}
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -60,14 +78,24 @@ const MainNavigation = () => {
           <NavLink className="navlinks">Blog</NavLink>{" "}
         </li>
         <li>
-          <NavLink to="/start-project">
-            <ButtonLight
-              style={{
-                padding: "10px 20px",
-              }}
-            >
-              Start a Project
-            </ButtonLight>
+          <NavLink>
+            {scrolled ? (
+              <ButtonDark
+                style={{
+                  padding: "10px 20px",
+                }}
+              >
+                Start a Project
+              </ButtonDark>
+            ) : (
+              <ButtonLight
+                style={{
+                  padding: "10px 20px",
+                }}
+              >
+                Start a Project
+              </ButtonLight>
+            )}
           </NavLink>
         </li>
       </ul>

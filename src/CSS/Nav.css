@@ -2,30 +2,43 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* gap: 22.125rem; */
-    margin:1rem  2rem 1rem var(--margin-x);
-    /* border: 1px solid #fff; */
-    /* border-radius: 128px; */
-    /* padding: 0.1rem 1.5rem; */
-    /* background-color:red ; */
-    /* width:80%; */
-    /* position: sticky; */
-    /* top: 0; */
-    /* z-index: 1001; */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-left:2rem;
+    padding-right: 2rem;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    transition: background-color 0.3s ease; 
+ 
+  }
+ 
+  nav.scrolled {
+    background-color: white; 
+    color: black;
+  }
+  nav h1, nav ul, nav li, nav a {
+    color: inherit; /* Inherit color from nav */
   }
   
+  .navlinks {
+    color: inherit; 
+  }
   nav ul {
     display: flex;
     align-items: center;
     gap:3rem;
-    /* flex: 1; */
     font-family:
       SF Pro Display,
       sans-serif;
   }
   nav h1 {
-    font-size: 24px;
-    font-family: "Neue Montreal", sans-serif; /* Apply Neue Montreal */
+    font-size: 32px;
+    font-family: 'PP Neue Montreal',sans-serif;
+    font-weight: 700;
+    line-height: 32px; 
+    letter-spacing: -0.64px;
+
   }
   nav ul li {
     list-style-type: none;
@@ -37,9 +50,9 @@ nav {
     text-decoration: none;
     white-space: nowrap;
   }
-  nav ul .navlinks:hover {
+  /* nav ul .navlinks:hover {
     color: #ffffffd8;
-  }
+  } */
 
   .start-project {
     background-color: #fff;
@@ -58,6 +71,8 @@ nav {
     vertical-align: middle;
   }
   
+
+  
   /* drop item */
   .drop-item {
     position: absolute;
@@ -74,6 +89,7 @@ nav {
     background-color: rgba(18, 18, 18, 0.2);
     backdrop-filter: blur(12.5px);
     z-index: 10;
+    color: #fff;
   }
   .drop-item li {
     padding: 0.5rem 1rem;

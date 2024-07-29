@@ -16,7 +16,6 @@ const AnimateCursor = () => {
         }}
         innerStyle={{
           backgroundColor: "#fff",
-          // mixBlendMode: "difference",
         }}
       />
     </div>

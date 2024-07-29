@@ -1,6 +1,6 @@
 import MainNavigation from "../components/MainNavigation";
 import { Outlet } from "react-router-dom";
-import AnimateCursor from "../components/AnimateCursor";
+// import AnimateCursor from "../components/AnimateCursor";
 import Footer from "../components/Footer";
 
 const RootLayout = () => {
@@ -8,7 +8,7 @@ const RootLayout = () => {
     <div className="container">
       <MainNavigation />
       <Outlet />
-      <AnimateCursor />
+      {/* <AnimateCursor /> */}
       <Footer />
     </div>
   );

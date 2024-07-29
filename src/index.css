@@ -1,33 +1,12 @@
 @import url("https://v1.fontapi.ir/css/SFProDisplay:400");
 @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
-@font-face {
-  font-family: "Neue Montreal";
-  src: url(./assets/fonts/NeueMontreal-Regular.otf) format("opentype");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Neue Montreal-bold";
-  src: url(./assets/fonts/NeueMontreal-Bold.otf) format("opentype");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "PP Editorial New-Italic";
-  src: url(./assets/fonts/PPEditorialNew-Italic-BF644b214fb0c0a.otf) format("opentype");
-  font-style: normal;
-
-}
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
 @font-face {
   font-family: "PP Editorial New";
   src: url(./assets/fonts/PPEditorialNew-Regular-BF644b214ff145f.otf) format("opentype");
   font-style: normal;
 }
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url(./assets/fonts/HelveticaNeueLight.otf) format("opentype");
-  font-style: normal;
-}
+
 :root{
   --text-color:#fff;
   --background-color:#121212;
@@ -36,9 +15,8 @@
   --head-margin-bottom:4.5rem ;
   --cursor-color:#fff;
 }
-*{
-  cursor: none;
-}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -53,7 +31,7 @@ img {
 video{
   width: 100%;
 }
-a:any-link{
+a{
   text-decoration: none;
   color: #fff;
 }
@@ -74,6 +52,7 @@ a:any-link{
 
 .dark-btn {
   outline: none;
+  /* border: none; */
   font-size: 24px;
   font-family:
     SF Pro Display,
@@ -114,11 +93,12 @@ a:any-link{
   font-size: 48px;
   font-weight: 800;
   font-family: "PP Editorial New",sans-serif;
+  font-style: normal;
 }
 .about-elleven p{
   font-family: "Helvetica Neue",sans-serif;
   font-weight: 400;
-  line-height: 2; /* 187.5% */
+  line-height: 2;
   font-size: 16px;
 
 }
@@ -283,107 +263,7 @@ padding: 0;
   margin-right: 2rem;
 } 
 
-/* .start-project-main > div {
-  margin: 2rem var(--margin-x);
-  border-radius: 40px;
-  display: flex;
-} */
 
-/* .start-project-main img, video {
-  width: 100%;
-  border-radius: 40px;
-} */
-
-/* .text-container {
-  padding: 3rem 4rem;
-} */
-
-/* .brand-box {
-  flex: 2;
-  font-size: 50px;
-  flex-direction: column;
-  align-items: flex-start;
-  font-family: "PP Editorial New", sans-serif;
-  font-weight: 400;
-} */
-/* 
-.brand-box p {
-  margin: 0;
-}
-
-.brand-text {
-  font-weight: 800;
-  font-style: italic;
-}
-
-.brand-text-small {
-  font-size: 18px;
-}
-
-.description {
-  flex: 2;
-  font-size: 20px;
-  text-align: justify;
-} */
-
-/* .brand-decision-container {
-  flex-direction: column;
-} */
-
-/* .brand-decision-container .head {
-  font-family: "PP Editorial New", sans-serif;
-  font-size: 45px;
-  white-space: nowrap;
-}
-
-.brand-decision-container .sub-head {
-  font-weight: 700;
-} */
-/* 
-.testimonial-box {
-  font-family: "Helvetica Neue";
-  font-weight: 400;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: aqua;
-}
-
-.testimonial-box .testimonial-text {
-  font-family: "PP Editorial New", sans-serif;
-  font-size: 1.4rem;
-  text-align: center;
-  background-color: #FF7E21;
-  
-} */
-
-/* .testimonial-box > div {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-/* 
-.tilted-image-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 2rem var(--margin-x);
-  border-radius: 40px;
-} */
-
-/* .tilted-image-box > div {
-  display: block; 
-  padding: 1rem;
-} */
-/* .box-1,
-.box-2 {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-} */
-/* .box-2{
-  transform: rotate(-9.79deg);
-  margin-left: -5rem;
-  margin-top: 3rem;
-} */
 
 @media(max-width:1400px){
   nav{

@@ -13,23 +13,23 @@
   }
   .insights-section{
     display: flex;
-    font-family: "Neue Montreal", sans-serif;
+    font-family: 'PP Neue Montreal',sans-serif;
     font-size: 20px;
-    font-weight: bolder;
+    font-weight:400;
     justify-content: space-evenly;
     padding: 3rem 2rem;
     background-color: #fff;
     border-radius: 25px;
-    /* margin: 2rem 6rem; */
     color: #121212;
     align-items: center;
-    gap:16px;
+    gap:5rem;
   }
   .article-about{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     flex-basis: 60%;
+    /* padding: 1rem 2rem; */
   
   }
   .insights img{
@@ -37,11 +37,13 @@
   }
   .article-about .title{
     font-size: 66.116px;
-    font-family: "Neue Montreal-bold";
+    font-weight: 500;
     margin: 0;
   }
   .article-about .description{
     margin-top: 0;
+    font-weight: 400;
+    width: 100%;
   }
   .read-more-btn{
     background-color: #121212;

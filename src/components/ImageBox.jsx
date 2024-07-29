@@ -20,7 +20,7 @@ const ImageBox = ({ imageSrc, altText }) => {
     <motion.div
       ref={boxRef}
       variants={variants}
-      hidden="hidden"
+      initial="hidden"
       animate={boxIsVisible ? "visible" : "hidden"}
       transition={{ duration: 0.5 }}
       

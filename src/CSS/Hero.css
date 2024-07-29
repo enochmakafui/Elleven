@@ -1,12 +1,18 @@
 
   .hero {
-    font-size: 4.2rem;
     margin: 4rem var(--margin-x);
     letter-spacing: -1.92px;
-    font-family: "Neue Montreal", sans-serif; 
+    font-family: 'PP Neue Montreal',sans-serif;
+    font-style: normal;
+
   }
   .hero h2 {
     margin: 0.5rem 0;
+    font-size: 96px;
+    line-height: 102px; 
+    font-weight: 400;
+
+
   }
   .hero-btn-container {
     margin-top: 90px;

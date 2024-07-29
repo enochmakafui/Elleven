@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const DropItem = () => {
   return (
@@ -12,7 +13,7 @@ const DropItem = () => {
         whileHover={{ scale: 1.1, backgroundColor: "#ff7e21" }}
         transition={{ type: "spring" }}
       >
-        Branding
+        <NavLink to="/start-project">Branding</NavLink>
       </motion.li>
       <motion.li
         whileHover={{ scale: 1.1, backgroundColor: "#ff7e21" }}

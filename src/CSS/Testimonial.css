@@ -10,7 +10,8 @@
     font-size: 36px;
     font-weight: 200;
     letter-spacing: -0.72px;
-    font-family: "PP Editorial New-Italic",sans-serif;
+    font-family: "PP Editorial New",sans-serif;
+    font-style:italic;
   }
   .testimonial-text{
     display: flex;
@@ -42,10 +43,8 @@
  
   .testimonial .profile-about{
     display: flex;
-    /* justify-content: center; */
     align-items:center;
     flex-direction: column;
-    /* gap: 2px; */
     font-family: "Helvetica Neue";
   
   
@@ -55,9 +54,11 @@
     font-size: 32px;
     padding: 0;
     margin-bottom: 0.2px;
+    font-weight: 400;
   }
   .profile-about .role{
     font-size: 24px;
+    font-weight: 400;
   }
   .next-profile-btn{
     width: 76px;

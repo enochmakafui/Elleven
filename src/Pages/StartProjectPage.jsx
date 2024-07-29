@@ -76,7 +76,7 @@ const StartProjectPage = () => {
           ref={textBoxRef}
           className="brand-box"
           variants={variants}
-          hidden="hidden"
+          initial="hidden"
           animate={textBoxIsVisible ? "visible" : "hidden"}
           transition={{ duration: 0.5 }}
         >
@@ -90,7 +90,7 @@ const StartProjectPage = () => {
         <motion.div
           className="description"
           variants={variants}
-          hidden="hidden"
+          initial="hidden"
           animate={textBoxIsVisible ? "visible" : "hidden"}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
@@ -109,7 +109,7 @@ const StartProjectPage = () => {
           ref={rebrandBoxRef}
           className="brand-decision-container"
           variants={variants}
-          hidden="hidden"
+          initial="hidden"
           animate={rebrandBoxIsVisible ? "visible" : "hidden"}
           transition={{ duration: 0.5 }}
         >
@@ -132,7 +132,7 @@ const StartProjectPage = () => {
         </motion.div>
         <motion.div
           variants={variants}
-          hidden="hidden"
+          initial="hidden"
           animate={rebrandBoxIsVisible ? "visible" : "hidden"}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
@@ -153,7 +153,7 @@ const StartProjectPage = () => {
         <motion.div
           ref={testimonialBoxRef}
           variants={variants}
-          hidden="hidden"
+          initial="hidden"
           animate={testimonialBoxIsVisible ? "visible" : "hidden"}
           transition={{ duration: 0.5 }}
         

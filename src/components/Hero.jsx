@@ -44,7 +44,8 @@ const Hero = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.8 }}
           >
-            <ButtonLight>Let's Talk</ButtonLight>
+            <ButtonLight>Let&apos;s Talk</ButtonLight>
+
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
