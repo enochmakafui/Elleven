@@ -23,6 +23,7 @@ const ImageBox = ({ imageSrc, altText }) => {
       initial="hidden"
       animate={boxIsVisible ? "visible" : "hidden"}
       transition={{ duration: 0.5 }}
+      className="image-container"
       
     >
       <img src={imageSrc} alt={altText} />

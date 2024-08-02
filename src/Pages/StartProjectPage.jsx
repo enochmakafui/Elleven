@@ -104,7 +104,9 @@ const StartProjectPage = () => {
       <ImageBox imageSrc={image1} altText="cal2care picture" />
       <ImageBox imageSrc={image2} altText="cal2care picture " />
 
-      <div>
+      <div
+      className="text-container"
+      >
         <motion.div
           ref={rebrandBoxRef}
           className="brand-decision-container"
@@ -158,7 +160,7 @@ const StartProjectPage = () => {
           transition={{ duration: 0.5 }}
         
         >
-          <p className="testimonial-text">
+          <p className="main-text">
             “I was impressed by the outcome so I awarded a 3-month contract to
             Elleven to aid in the post branding process. The team did my
             company’s brochures and social media posts and they were awesome.”
@@ -167,7 +169,7 @@ const StartProjectPage = () => {
         </motion.div>
       </div>
       <ImageBox imageSrc={temporaryStaffImage} altText="cal2care picture" />
-      <div className=" tilted-image-box">
+      <div className="tilted-image-box">
         <div className="box-1">
           <img src={supportedLivingRoomImage} alt="" />
         </div>

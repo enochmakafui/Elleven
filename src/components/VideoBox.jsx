@@ -23,6 +23,7 @@ const VideoBox = ({ videoSrc }) => {
       initial="hidden"
       animate={boxIsVisible ? "visible" : "hidden"}
       transition={{ duration: 0.5 }}
+      className="video-container"
     >
       <video autoPlay loop muted>
         <source src={videoSrc} type="video/mp4" />

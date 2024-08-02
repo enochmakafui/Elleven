@@ -24,6 +24,10 @@ body {
   color: #fff;
   position: relative;
 }
+h1{
+  margin: 0;
+  padding:0;
+}
 
 img {
   width: 100%;
@@ -41,7 +45,7 @@ a{
   outline: none;
   margin-right: 1.5rem;
   border-radius: 64px;
-  font-size: 24px;
+  font-size: 22px;
   font-family:
     SF Pro Display,
     sans-serif;
@@ -53,7 +57,7 @@ a{
 .dark-btn {
   outline: none;
   /* border: none; */
-  font-size: 24px;
+  font-size: 22px;
   font-family:
     SF Pro Display,
     sans-serif;
@@ -85,8 +89,10 @@ a{
 .footer{
   display: grid;
   grid-template-columns: 2fr 1fr 1fr ;
-  gap:8rem;
-  margin: 5rem var(--margin-x);
+  gap:1.5rem;
+  margin-top:5rem;
+  margin-left: var(--margin-x);
+  margin-bottom: 1rem;
 }
 .about-elleven h2{
   color: #FF7E21;
@@ -177,10 +183,13 @@ padding: 0;
   gap:3rem;
   color: #121212;
 }
-.start-project-main div{
+.image-container,.video-container{
+  display:flex;
+}
+/* .start-project-main div{
   display:flex;
 
-}
+} */
 .start-project-main img,video{
   border-radius: 40px;
 
@@ -188,11 +197,14 @@ padding: 0;
 /* text container */
 .text-container {
   padding: 4rem 4rem;
+  display: grid;
+  gap:1rem;
+  grid-template-columns: 1fr 1fr;
 }
 .text-container .brand-box{
   display: flex;
   flex-direction: column;
-  width:50%;
+  /* width:50%; */
   font-size: 50px;
   font-family: "PP Editorial New", sans-serif;
   padding: 2rem;
@@ -214,7 +226,7 @@ padding: 0;
 .description{
   text-align: justify;
   font-size: 1.5rem;
-  width:50%;
+  /* width:50%; */
   align-items: center; 
 }
 
@@ -235,14 +247,16 @@ padding: 0;
 
 /* testimonial */
 .testimonial-box {
+  display: flex;
   flex-direction: column;
   font-family: "Helvetica Neue";
   font-weight: 400;
   justify-content: center;
+  padding: 1rem 2rem;
   align-items: center;
   text-align: center;
 }
-.testimonial-box .testimonial-text {
+.testimonial-box .main-text {
   font-family: "PP Editorial New", sans-serif;
   font-size: 1.4rem;
   text-align: center;
@@ -251,7 +265,8 @@ padding: 0;
 .testimonial-box div{
   flex-direction: column;
 }
-.titled-image-box{
+.tilted-image-box{
+  display: flex;
   padding: 2rem;
 }
 
