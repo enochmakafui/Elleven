@@ -28,9 +28,8 @@ nav {
     display: flex;
     align-items: center;
     gap:3rem;
-    font-family:
-      SF Pro Display,
-      sans-serif;
+    font-family: 'SF Pro Display', sans-serif;
+
   }
   nav h1 {
     font-size: 32px;
@@ -43,6 +42,8 @@ nav {
   nav ul li {
     list-style-type: none;
     font-size: 18px;
+    font-weight: lighter;
+
   }
   nav ul a {
     display: block;
