@@ -49,21 +49,20 @@ a{
   border-radius: 64px;
   font-size: 22px;
   font-family: 'SF Pro Display', sans-serif;
-  padding: 20px 48px;
+  padding: 15px 30px;
   color: #121212;
   white-space: nowrap;
 }
 
 .dark-btn {
-  display: flex;
-  justify-content: center;
   outline: none;
   font-size: 22px;
   font-family: 'SF Pro Display', sans-serif;
-  padding: 20px 48px;
+  padding: 15px 30px;
+  margin-right: 1.5rem;
   background-color: #121212;
   border-radius: 64px;
-  border-color: #fff;
+  /* border-color: #fff; */
   color: #fff;
 }
 .dark-btn:hover{

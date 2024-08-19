@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const ImageBox = ({ imageSrc, altText }) => {
   const [boxIsVisible, setBoxIsVisible] = useState(false);
   const boxRef = useRef(null);
@@ -26,7 +27,11 @@ const ImageBox = ({ imageSrc, altText }) => {
       className="image-container"
       
     >
-      <img src={imageSrc} alt={altText} />
+      <LazyLoadImage
+      src={imageSrc}
+      alt={altText}
+      effect="blur"
+      />
     </motion.div>
   );
 };

@@ -2,8 +2,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.2rem;
-    margin-bottom: 0.2rem;
     padding-left:var(--margin-x);
     padding-right: 2rem;
     position: sticky;

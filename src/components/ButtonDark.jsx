@@ -1,25 +1,25 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+// import { useState } from "react";
 
 const ButtonDark = ({ children, style }) => {
-  const [showArrow,setShowArrow] = useState(false);
-  const handleShowArrow = () =>{
-    setShowArrow(true)
-  }
-  const handleHideArrow = () =>{
-    setShowArrow(false)
-  }
+  // const [showArrow,setShowArrow] = useState(false);
+  // const handleShowArrow = () =>{
+  //   setShowArrow(true)
+  // }
+  // const handleHideArrow = () =>{
+  //   setShowArrow(false)
+  // }
 
   return (
     <motion.button
-      // whileHover={}
-      onMouseEnter={handleShowArrow}
-      onMouseLeave={handleHideArrow}
+      // onMouseEnter={handleShowArrow}
+      // onMouseLeave={handleHideArrow}
+      whileHover={{scale:1.1}}
       className="dark-btn"
       style={style}
     >
       {children}
-      {
+      {/* {
         showArrow &&  <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -32,7 +32,7 @@ const ButtonDark = ({ children, style }) => {
           fill="white"
         />
       </svg>
-      }
+      } */}
     </motion.button>
   );
 };

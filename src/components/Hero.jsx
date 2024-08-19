@@ -52,7 +52,7 @@ const Hero = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.5, ease: "easeInOut", delay: 1 }}
           >
-            <ButtonDark>See our work</ButtonDark>
+            <ButtonDark style={{borderColor:"#fff"}}>See our work</ButtonDark>
           </motion.div>
         </div>
       </section>

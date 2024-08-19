@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../CSS/Carrousel.css";
 import "swiper/css";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -87,7 +87,8 @@ const Carrousel = () => {
                       : ""
                   }`}
                 >
-                  <img src={image} alt={`slide ${index}`} />
+                  {/* <img src={image} alt={`slide ${index}`} /> */}
+                  <LazyLoadImage src={image} alt={`slide ${index}`}  className="image"/>
                 </div>
               )}
             </SwiperSlide>

@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
 import firstImage from "../assets/images/Rectangle 302.png";
 import secondImage from "../assets/images/Rectangle 303.png";
 import thirdImage from "../assets/images/Rectangle 304.png";
