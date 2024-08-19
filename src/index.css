@@ -52,8 +52,29 @@ a{
   padding: 15px 30px;
   color: #121212;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
-
+.light-btn .button-text {
+  display: inline-block;
+  transition: text-indent 0.3s ease;
+}
+.light-btn .arrow {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #121212;
+  transition: right 0.3s ease;
+}
+.light-btn:hover .arrow {
+  right: 10px;
+}
+.light-btn:hover .button-text {
+  text-indent: -5px; 
+}
 .dark-btn {
   outline: none;
   font-size: 22px;
@@ -62,11 +83,31 @@ a{
   margin-right: 1.5rem;
   background-color: #121212;
   border-radius: 64px;
-  /* border-color: #fff; */
   color: #fff;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
-.dark-btn:hover{
-  gap: 1rem;
+.dark-btn .button-text {
+  display: inline-block;
+  transition: text-indent 0.3s ease;
+}
+.dark-btn .arrow {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  transition: right 0.3s ease;
+}
+
+.dark-btn:hover .arrow {
+  right: 10px;
+}
+.dark-btn:hover .button-text {
+  text-indent: -5px; 
 }
 
 /* lerp circle */

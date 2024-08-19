@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import "../CSS/NewsLetter.css";
+import ButtonLight from "./ButtonLight";
 const NewsLetter = () => {
   const ref = useRef(null);
   const [isVisible, setIsvisible] = useState(false);
@@ -33,10 +34,7 @@ const NewsLetter = () => {
       <form action="">
         <input type="email" placeholder="enter your email" />
       </form>
-      <motion.button className="subscribe-btn" whileHover={{ scale: 1.1 }}>
-        Subscribe{" "}
-       
-      </motion.button>
+      <ButtonLight>Subscribe</ButtonLight>
     </motion.div>
   );
 };

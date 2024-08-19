@@ -27,6 +27,8 @@ nav {
     align-items: center;
     gap:3rem;
     font-family: 'SF Pro Display', sans-serif;
+    margin-top: 7px;
+    margin-bottom: 7px;
 
   }
   nav h1 {
@@ -49,18 +51,6 @@ nav {
     text-decoration: none;
     white-space: nowrap;
   }
-  /* nav ul .navlinks:hover {
-    color: #ffffffd8;
-  } */
-/* 
-  .start-project {
-    background-color: #fff;
-    border-radius: 64px;
-    font-size: 24px;
-    padding: 16px 48px;
-    color: #121212;
-    white-space: nowrap;
-  } */
   
   .dropdown-button {
     border: none;
@@ -69,8 +59,6 @@ nav {
     cursor: pointer;
     vertical-align: middle;
   }
-  
-
   
   /* drop item */
   .drop-item {

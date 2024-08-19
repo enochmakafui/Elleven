@@ -82,17 +82,18 @@ const MainNavigation = () => {
             {scrolled ? (
               <ButtonDark
                 style={{
-                  padding: "10px 20px",
+                  // padding: "10px 25px",
+                  fontSize:"20px"
                 }}
               >
                 Start a Project
               </ButtonDark>
             ) : (
               <ButtonLight
-                style={{
-                  padding: "10px 20px",
-                }}
-              >
+              style={{
+                // padding: "10px 25px",
+                fontSize:"20px"
+              }}>
                 Start a Project
               </ButtonLight>
             )}
