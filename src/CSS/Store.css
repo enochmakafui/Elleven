@@ -3,11 +3,12 @@
     grid-template-columns: 1fr 1fr;
     position: relative;
   }
-  .last-grid-container{
+
+.last-grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .store-text{
+.store-text{
     text-align: center;
     position:absolute;
     left: 50%;
@@ -15,7 +16,7 @@
     transform: translate(-50%, -50%);
   
   }
-  .store-text p{
+.store-text p{
     font-size: 64px;
     font-family:
     SF Pro Display,
@@ -23,6 +24,6 @@
     margin: 0;
   
   }
-  .store-text-container{
+.store-text-container{
     margin-bottom: 2rem;
   }

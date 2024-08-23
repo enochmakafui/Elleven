@@ -12,6 +12,7 @@
     letter-spacing: -0.72px;
     font-family: "PP Editorial New",sans-serif;
     font-style:italic;
+    line-height: normal;
   }
   .testimonial-text{
     display: flex;
@@ -20,6 +21,7 @@
     align-self: center;
     justify-self: center;
     padding: 0;
+    font-family: "SF Pro Display";
   }
   .testimonial p{
     font-size: 48px;

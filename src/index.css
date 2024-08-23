@@ -1,7 +1,8 @@
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+/* @import url('https://fonts.cdnfonts.com/css/helvetica-neue-55'); */
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
 @font-face {
   font-family: "PP Editorial New";
   src: url(./assets/fonts/PPEditorialNew-Regular-BF644b214ff145f.otf) format("opentype");
@@ -134,20 +135,27 @@ a{
   gap:1.5rem;
   margin-top:5rem;
   margin-left: var(--margin-x);
+  margin-right: var(--margin-x);
   margin-bottom: 1rem;
 }
 .about-elleven h2{
   color: #FF7E21;
   font-size: 48px;
   font-weight: 800;
+  line-height: 30px;
+  letter-spacing: -0.96px;
   font-family: "PP Editorial New",sans-serif;
   font-style: normal;
 }
 .about-elleven p{
-  font-family: "Helvetica Neue",sans-serif;
   font-weight: 400;
-  line-height: 2;
+  line-height: 30px;
+  letter-spacing: -0.32px;
+  font-style: normal;
   font-size: 16px;
+  font-family: "Helvetica Neue",sans-serif;
+  width: 60%;
+
 
 }
 .menu{
@@ -156,15 +164,17 @@ a{
   justify-content: center;
   flex-direction: column;
   font-size: 16px;
+  letter-spacing: -0.32px;
+  line-height: 30px;
   font-weight: 400;
   gap: 14px;
+  font-style: normal;
   font-family: "Helvetica Neue",sans-serif;
 }
 .menu p{
   color: #ff7e21;
   font-size: 20px;
   font-weight: 400;
-  font-family: "Helvetica Neue",sans-serif;
 
 
 }
@@ -174,9 +184,13 @@ a{
   justify-content: center;
   flex-direction: column;
   font-size: 16px;
+  letter-spacing: -0.32px;
+  line-height: 30px;
   font-weight: 400;
   gap: 14px;
+  font-style: normal;
   font-family: "Helvetica Neue",sans-serif;
+
 }
 .services p{
   color: #ff7e21;
@@ -189,8 +203,11 @@ a{
   justify-content: center;
   flex-direction: column;
   font-size: 16px;
+  letter-spacing: -0.32px;
+  line-height: 30px;
   font-weight: 400;
   gap: 14px;
+  font-style: normal;
   font-family: "Helvetica Neue",sans-serif;
 
 }
@@ -320,8 +337,21 @@ padding: 0;
   margin-right: 2rem;
 } 
 
+.branding-page{
+  margin: 1rem var(--margin-x);
+  display:flex;
+  flex-direction: column;
+  gap:4rem
 
+}
+.branding-page h2{
+  font-family:'PP Neue Montreal',sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  letter-spacing: -1.28px ;
+  width: 834px
 
+}
 @media(max-width:1400px){
   nav{
     gap:4rem;

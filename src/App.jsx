@@ -4,8 +4,9 @@ import HomePage from "./Pages/HomePage";
 import StoryPage from "./Pages/StorePage";
 import WorkPage from "./Pages/WorkPage";
 import StorePage from "./Pages/StorePage";
-import StartProjectPage from "./Pages/StartProjectPage";
+import CareBrandPage from "./Pages/CareBrandPage";
 import BlogPage from "./Pages/BlogPage";
+import BrandingPage from "./Pages/BrandingPage";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
       { path: "work", element: <WorkPage /> },
       { path: "store", element: <StorePage /> },
       { path: "blog", element: <BlogPage /> },
-      { path: "start-project", element: <StartProjectPage /> },
+      { path: "brand", element: <BrandingPage/> },
+      {path:"calcare-brand",element:<CareBrandPage />}
     ],
   },
 ]);

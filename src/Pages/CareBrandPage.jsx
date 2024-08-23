@@ -22,7 +22,7 @@ import VideoBox from "../components/VideoBox";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 
-const StartProjectPage = () => {
+const CareBrandPage = () => {
   const textBoxRef = useRef(null);
   const rebrandBoxRef = useRef(null);
   const testimonialBoxRef = useRef(null);
@@ -183,4 +183,4 @@ const StartProjectPage = () => {
   );
 };
 
-export default StartProjectPage;
+export default CareBrandPage;

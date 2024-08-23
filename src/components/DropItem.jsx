@@ -13,7 +13,7 @@ const DropItem = () => {
         whileHover={{ scale: 1.1, backgroundColor: "#ff7e21" }}
         transition={{ type: "spring" }}
       >
-        <NavLink to="/start-project">Branding</NavLink>
+        <NavLink to="/brand">Branding</NavLink>
       </motion.li>
       <motion.li
         whileHover={{ scale: 1.1, backgroundColor: "#ff7e21" }}
