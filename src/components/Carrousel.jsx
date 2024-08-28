@@ -50,7 +50,7 @@ const Carrousel = () => {
   };
 
   return (
-    <>
+    <div className="carrousel">
       <motion.div
         className="carrousel-container"
         ref={carrouselRef}
@@ -133,7 +133,7 @@ const Carrousel = () => {
       >
         <ButtonLight> See all our works</ButtonLight>
       </motion.div>
-    </>
+    </div>
   );
 };
 

@@ -1,74 +1,72 @@
-.testimonial{
-    padding:48px 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .testimonial h2{
-    font-size: 36px;
-    font-weight: 200;
-    letter-spacing: -0.72px;
-    font-family: "PP Editorial New",sans-serif;
-    font-style:italic;
-    line-height: normal;
-  }
-  .testimonial-text{
-    display: flex;
-    flex-direction: column;
-    width:80%;
-    align-self: center;
-    justify-self: center;
-    padding: 0;
-    font-family: "SF Pro Display";
-  }
-  .testimonial p{
-    font-size: 48px;
-    font-weight: 400;
-    text-align: justify;
-  }
-  .testimonial .profile{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    align-self: flex-start;
-  
-  
-  }
-  .testimonial img{
-    width:80px;
-    height: 80px;
-    border-radius: 50%;
-  }
- 
-  .testimonial .profile-about{
-    display: flex;
-    align-items:center;
-    flex-direction: column;
-    font-family: "Helvetica Neue";
-  
-  
-  }
-  .profile-about p{
-    font-family: "Helvetica Neue";
-    font-size: 32px;
-    padding: 0;
-    margin-bottom: 0.2px;
-    font-weight: 400;
-  }
-  .profile-about .role{
-    font-size: 24px;
-    font-weight: 400;
-  }
-  .next-profile-btn{
-    width: 76px;
-    height: 76px;
-    background-color: #ff7e21;
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    position: absolute;
-    right:40px
-  }
+.testimonial {
+  padding: 48px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.testimonial h2 {
+  color: #fff;
+  font-family: "PP Editorial New";
+  font-size: 36px;
+  font-style: italic;
+  font-weight:100;
+  line-height: normal;
+  letter-spacing: -0.72px;
+}
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-self: center;
+  justify-self: center;
+  padding: 0;
+  font-size: 48px;
+  font-family: "SF Pro Display";
+}
+.testimonial p {
+  font-size: 48px;
+  font-weight: 400;
+  text-align: justify;
+}
+.testimonial .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  align-self: flex-start;
+}
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.testimonial .profile-about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Helvetica Neue";
+}
+.profile-about p {
+  font-family: "Helvetica Neue";
+  font-size: 32px;
+  padding: 0;
+  margin-bottom: 0.2px;
+  font-weight: 400;
+}
+.profile-about .role {
+  font-size: 24px;
+  font-weight: 400;
+}
+.next-profile-btn {
+  width: 76px;
+  height: 76px;
+  background-color: #ff7e21;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  position: absolute;
+  right: 40px;
+}

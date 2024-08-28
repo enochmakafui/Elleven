@@ -16,6 +16,7 @@ import temporaryStaffImage from "../assets/images/start-project-images/Temporary
 import supportedLivingRoomImage from "../assets/images/start-project-images/supported living mockup.jpg";
 import trifoldBrochureImage from "../assets/images/start-project-images/trifold Brochure mockup.png";
 import weCareAnimationVideo from "../assets/Videos/we care with love fin.mp4";
+// import nextProjectImage from "../assets/images/start-project-images/next project.png";
 import carAnimationVideo from "../assets/Videos/car.mp4";
 import ImageBox from "../components/ImageBox";
 import VideoBox from "../components/VideoBox";
@@ -27,14 +28,21 @@ const CareBrandPage = () => {
   const rebrandBoxRef = useRef(null);
   const testimonialBoxRef = useRef(null);
 
+
+  const [freshBayImageVisible, setFreshBayImageVisible] = useState(false);
   const [textBoxIsVisible, setTextBoxIsVisible] = useState(false);
   const [rebrandBoxIsVisible, setRebrandBoxIsVisible] = useState(false);
   const [testimonialBoxIsVisible, setTestimonialBoxIsVisible] = useState(false);
 
+  const showFreshBayImageHandler = ()=>{
+    setFreshBayImageVisible(true);
+  }
+  
   const testimonialBoxInView = useInView(testimonialBoxRef, {
     triggerOnce: true,
     threshold: 0.1,
   });
+
 
   const rebrandBoxInView = useInView(rebrandBoxRef, {
     triggerOnce: true,
@@ -179,6 +187,11 @@ const CareBrandPage = () => {
       </div>
       <ImageBox imageSrc={trifoldBrochureImage} altText="cal2care picture" />
       <ImageBox imageSrc={flyerImage} altText="cal2care picture" />
+      {/* <div  >
+        {
+          freshBayImageVisible?
+        (<img src={nextProjectImage} alt="next project image" />):<img src={} alt=""/>}
+      </div> */}
     </main>
   );
 };

@@ -1,3 +1,7 @@
+.carrousel{
+  border-bottom: 1px solid white;
+  padding-bottom: 3.5rem;
+}
 .carrousel-container {
   margin: 15rem 0 5rem 0;
   position: relative;
