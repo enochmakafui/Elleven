@@ -246,6 +246,7 @@ video {
 .text-container {
   padding: 4rem 4rem;
   display: grid;
+  align-items: center;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
 }
@@ -314,8 +315,9 @@ video {
   font-family: "Helvetica Neue";
   font-weight: 400;
   justify-content: center;
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   align-items: center;
+  margin: 0 17rem;
   text-align: center;
 }
 .testimonial-box .main-text {

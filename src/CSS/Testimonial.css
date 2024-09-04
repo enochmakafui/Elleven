@@ -26,7 +26,7 @@
   font-family: "SF Pro Display";
 }
 .testimonial p {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 400;
   text-align: justify;
 }
@@ -48,6 +48,7 @@
   align-items: center;
   flex-direction: column;
   font-family: "Helvetica Neue";
+  gap:1rem
 }
 .profile-about p {
   font-family: "Helvetica Neue";
@@ -55,6 +56,7 @@
   padding: 0;
   margin-bottom: 0.2px;
   font-weight: 400;
+  margin-top: 0;
 }
 .profile-about .role {
   font-size: 24px;

@@ -13,18 +13,19 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     children: [
-      { path: "", element: <HomePage /> },
-      { path: "story", element: <StoryPage /> },
-      { path: "work", element: <WorkPage /> },
-      { path: "store", element: <StorePage /> },
-      { path: "blog", element: <BlogPage /> },
-      { path: "brand", element: <BrandingPage/> },
-      {path:"calcare-brand",element:<CareBrandPage />}
+      { path: "/", element: <HomePage /> },
+      { path: "/story", element: <StoryPage /> },
+      { path: "/work", element: <WorkPage /> },
+      { path: "/store", element: <StorePage /> },
+      { path: "/blog", element: <BlogPage /> },
+      { path: "/brand", element: <BrandingPage /> },
+      { path: "/calcare-brand", element: <CareBrandPage /> },
     ],
   },
 ]);
+
 function App() {
-  return  <RouterProvider router={router} />;
+  return <RouterProvider router={router} />;
 }
 
 export default App;

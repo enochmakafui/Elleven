@@ -16,33 +16,32 @@ import temporaryStaffImage from "../assets/images/start-project-images/Temporary
 import supportedLivingRoomImage from "../assets/images/start-project-images/supported living mockup.jpg";
 import trifoldBrochureImage from "../assets/images/start-project-images/trifold Brochure mockup.png";
 import weCareAnimationVideo from "../assets/Videos/we care with love fin.mp4";
-// import nextProjectImage from "../assets/images/start-project-images/next project.png";
+import nextProjectImage from "../assets/images/start-project-images/next project.png";
 import carAnimationVideo from "../assets/Videos/car.mp4";
 import ImageBox from "../components/ImageBox";
 import VideoBox from "../components/VideoBox";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 
+import freshBayImage from "../assets/images/branding-page-images/freshBayBrand.png";
+
 const CareBrandPage = () => {
   const textBoxRef = useRef(null);
   const rebrandBoxRef = useRef(null);
   const testimonialBoxRef = useRef(null);
 
+  const [startProjectMainImageSrc, setStartProjectMainImageSrc] = useState(nextProjectImage);
 
-  const [freshBayImageVisible, setFreshBayImageVisible] = useState(false);
+  const hoverStartProjectSrc = freshBayImage;
+
   const [textBoxIsVisible, setTextBoxIsVisible] = useState(false);
   const [rebrandBoxIsVisible, setRebrandBoxIsVisible] = useState(false);
   const [testimonialBoxIsVisible, setTestimonialBoxIsVisible] = useState(false);
 
-  const showFreshBayImageHandler = ()=>{
-    setFreshBayImageVisible(true);
-  }
-  
   const testimonialBoxInView = useInView(testimonialBoxRef, {
     triggerOnce: true,
     threshold: 0.1,
   });
-
 
   const rebrandBoxInView = useInView(rebrandBoxRef, {
     triggerOnce: true,
@@ -112,9 +111,7 @@ const CareBrandPage = () => {
       <ImageBox imageSrc={image1} altText="cal2care picture" />
       <ImageBox imageSrc={image2} altText="cal2care picture " />
 
-      <div
-      className="text-container"
-      >
+      <div className="text-container">
         <motion.div
           ref={rebrandBoxRef}
           className="brand-decision-container"
@@ -166,7 +163,6 @@ const CareBrandPage = () => {
           initial="hidden"
           animate={testimonialBoxIsVisible ? "visible" : "hidden"}
           transition={{ duration: 0.5 }}
-        
         >
           <p className="main-text">
             “I was impressed by the outcome so I awarded a 3-month contract to
@@ -187,6 +183,13 @@ const CareBrandPage = () => {
       </div>
       <ImageBox imageSrc={trifoldBrochureImage} altText="cal2care picture" />
       <ImageBox imageSrc={flyerImage} altText="cal2care picture" />
+      <motion.div className="start-project-main"
+        onHoverStart={() => setStartProjectMainImageSrc(hoverStartProjectSrc)}
+        onHoverEnd={() => setStartProjectMainImageSrc(nextProjectImage)}
+      >
+
+        <ImageBox imageSrc={startProjectMainImageSrc} altText="cal2care picture" />
+      </motion.div>
       {/* <div  >
         {
           freshBayImageVisible?
