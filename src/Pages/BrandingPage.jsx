@@ -1,6 +1,6 @@
-import cal2careImage from "../assets/images/branding-page-images/cal2careBrand.png";
-import edgeTellurImage from "../assets/images/branding-page-images/EdgeTellurBrand.png";
-import freshBayImage from "../assets/images/branding-page-images/freshBayBrand.png";
+import cal2careImage from "../assets/images/branding_page_images/cal2careBrand.png";
+import edgeTellurImage from "../assets/images/branding_page_images/EdgeTellurBrand.png";
+import freshBayImage from "../assets/images/branding_page_images/freshBayBrand.png";
 import { NavLink } from "react-router-dom";
 const BrandingPage = () => {
   return (
@@ -18,7 +18,9 @@ const BrandingPage = () => {
         <img src={edgeTellurImage} alt="edge tellur image" />
       </div>
       <div>
-        <img src={freshBayImage} alt="fresh bay image" />
+        <NavLink to="/devron-page">
+          <img src={freshBayImage} alt="fresh bay image" />
+        </NavLink>
       </div>
     </div>
   );

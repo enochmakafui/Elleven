@@ -7,6 +7,7 @@ import StorePage from "./Pages/StorePage";
 import CareBrandPage from "./Pages/CareBrandPage";
 import BlogPage from "./Pages/BlogPage";
 import BrandingPage from "./Pages/BrandingPage";
+import DevronBrandPage from "./Pages/DevronBrandPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: "/blog", element: <BlogPage /> },
       { path: "/brand", element: <BrandingPage /> },
       { path: "/calcare-brand", element: <CareBrandPage /> },
+      {path:"/devron-page",element:<DevronBrandPage/>}
     ],
   },
 ]);

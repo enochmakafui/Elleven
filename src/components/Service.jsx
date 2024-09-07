@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import carAnimationVideo from "../assets/Videos/car.mp4";
+import carAnimationVideo from "../assets/Videos/cal2careBrand_videos/car.mp4";
 import "../CSS/ClientSection.css";
 const Service = () => {
   const h2Ref = useRef(null);

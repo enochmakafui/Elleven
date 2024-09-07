@@ -1,29 +1,30 @@
-import image1 from "../assets/images/start-project-images/Image1.png";
-import image2 from "../assets/images/start-project-images/Image2.png";
-import image3 from "../assets/images/start-project-images/Image3.png";
-import image4 from "../assets/images/start-project-images/Image4.png";
-import image5 from "../assets/images/start-project-images/Image5.png";
-import image6 from "../assets/images/start-project-images/Image6.png";
-import image7 from "../assets/images/start-project-images/Image7.png";
-import image8 from "../assets/images/start-project-images/Image8.png";
-import image9 from "../assets/images/start-project-images/Image9.png";
-import image10 from "../assets/images/start-project-images/Image10.png";
-import image12 from "../assets/images/start-project-images/Image12.png";
-import flyerImage from "../assets/images/start-project-images/flyer  .png";
-import insideCareOfficeImage from "../assets/images/start-project-images/inside care office.png";
-import mainBrochureImage from "../assets/images/start-project-images/main brochure m ockup.png";
-import temporaryStaffImage from "../assets/images/start-project-images/Temporary  staffing brochure mockup@0.75x.png";
-import supportedLivingRoomImage from "../assets/images/start-project-images/supported living mockup.jpg";
-import trifoldBrochureImage from "../assets/images/start-project-images/trifold Brochure mockup.png";
-import weCareAnimationVideo from "../assets/Videos/we care with love fin.mp4";
-import nextProjectImage from "../assets/images/start-project-images/next project.png";
-import carAnimationVideo from "../assets/Videos/car.mp4";
+import image1 from "../assets/images/cal2careBrand_images/Image1.png";
+import image2 from "../assets/images/cal2careBrand_images/Image2.png";
+import image3 from "../assets/images/cal2careBrand_images/Image3.png";
+import image4 from "../assets/images/cal2careBrand_images/Image4.png";
+import image5 from "../assets/images/cal2careBrand_images/Image5.png";
+import image6 from "../assets/images/cal2careBrand_images/Image6.png";
+import image7 from "../assets/images/cal2careBrand_images/Image7.png";
+import image8 from "../assets/images/cal2careBrand_images/Image8.png";
+import image9 from "../assets/images/cal2careBrand_images/Image9.png";
+import image10 from "../assets/images/cal2careBrand_images/Image10.png";
+import image12 from "../assets/images/cal2careBrand_images/Image12.png";
+import flyerImage from "../assets/images/cal2careBrand_images/flyer.png";
+import insideCareOfficeImage from "../assets/images/cal2careBrand_images/inside_care_office.png";
+import mainBrochureImage from "../assets/images/cal2careBrand_images/main_brochure_mockup.png";
+import temporaryStaffImage from "../assets/images/cal2careBrand_images/Temporary_staffing_brochure_mockup@0.75x.png";
+import supportedLivingRoomImage from "../assets/images/cal2careBrand_images/supported_living_mockup.jpg";
+import trifoldBrochureImage from "../assets/images/cal2careBrand_images/trifold_Brochure_mockup.png";
+import weCareAnimationVideo from "../assets/Videos/cal2careBrand_videos/we_care_with_love_fin.mp4";
+import nextProjectImage from "../assets/images/cal2careBrand_images/next_project.png";
+import carAnimationVideo from "../assets/Videos/cal2careBrand_videos/car.mp4";
 import ImageBox from "../components/ImageBox";
 import VideoBox from "../components/VideoBox";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 
-import freshBayImage from "../assets/images/branding-page-images/freshBayBrand.png";
+import freshBayImage from "../assets/images/branding_page_images/freshBayBrand.png";
+
 
 const CareBrandPage = () => {
   const textBoxRef = useRef(null);
@@ -76,7 +77,7 @@ const CareBrandPage = () => {
   };
 
   return (
-    <main className="start-project-main">
+    <div className="start-project-main">
       <VideoBox videoSrc={weCareAnimationVideo} />
       <div className=" text-container ">
         <motion.div
@@ -195,7 +196,7 @@ const CareBrandPage = () => {
           freshBayImageVisible?
         (<img src={nextProjectImage} alt="next project image" />):<img src={} alt=""/>}
       </div> */}
-    </main>
+    </div>
   );
 };
 

@@ -3,6 +3,21 @@
 @import url("https://fonts.cdnfonts.com/css/helvetica-neue-5");
 
 @font-face {
+  font-family: "Nicholas W01 Bold";
+  src: url("https://db.onlinewebfonts.com/t/46b8631720f2071d604a3ba3f1d7ff99.eot");
+  src: url("https://db.onlinewebfonts.com/t/46b8631720f2071d604a3ba3f1d7ff99.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/46b8631720f2071d604a3ba3f1d7ff99.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/46b8631720f2071d604a3ba3f1d7ff99.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/46b8631720f2071d604a3ba3f1d7ff99.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/46b8631720f2071d604a3ba3f1d7ff99.svg#Nicholas W01 Bold")
+      format("svg");
+}
+
+@font-face {
   font-family: "PP Editorial New";
   src: url(./assets/fonts/PPEditorialNew-Regular-BF644b214ff145f.otf)
     format("opentype");
@@ -260,6 +275,14 @@ video {
   font-weight: 400;
   line-height: 112%;
   letter-spacing: -0.5px;
+}
+.text-container .devron-brand {
+  font-family: "Nicholas W01 Bold";
+  font-weight: 700;
+}
+.devron-brand-text-small {
+  font-family: "PP Editorial New", sans-serif;
+  font-weight:normal ;
 }
 
 .brand-text {
