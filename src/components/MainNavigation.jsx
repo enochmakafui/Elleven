@@ -55,7 +55,7 @@ const MainNavigation = () => {
       <h1>
         <NavLink to="/"> Elleven</NavLink>
       </h1>
-      <ul className={isMenuOpen ? "menu-open" : ""}>
+      <ul className={isMenuOpen ? "menu-open" : "menu-not-open"}>
         <li>
           <NavLink className="navlinks">Our Story </NavLink>
         </li>
@@ -86,12 +86,22 @@ const MainNavigation = () => {
                 />
               </motion.svg>
             </button>
-            <AnimatePresence>{isExpanded && <DropItem />}</AnimatePresence>
+            <AnimatePresence>
+              {!isMenuOpen && isExpanded && <DropItem />}
+            </AnimatePresence>
           </NavLink>
         </li>
-        {/* <li>
-          <DropItem />
-        </li> */}
+        <li className="mobile-drop">
+          {isMenuOpen && (
+            <div className="mobile-drop-item ">
+              <li>
+                <NavLink to="/brand">Branding</NavLink>
+              </li>
+              <li>Web & App Design</li>
+              <li>Marketting</li>
+            </div>
+          )}
+        </li>
         <li>
           <NavLink className="navlinks">Store </NavLink>
         </li>

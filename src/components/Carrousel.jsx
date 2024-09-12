@@ -62,11 +62,21 @@ const Carrousel = () => {
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
-          slidesPerView={1.7}
+          // slidesPerView={1.7}
           autoplay={{ delay: 3000 }}
           centeredSlides={true}
           loop={true}
           speed={2000}
+          breakpoints={{
+            // Adjust slidesPerView based on screen width
+            500: {
+              slidesPerView: 1,
+              spaceBetween: 10, // For mobile screens
+            },
+            768: {
+              slidesPerView: 1.7, // For tablets and larger screens
+            },
+          }}
           navigation={{
             prevEl: ".swiper-button-prev",
             nextEl: ".swiper-button-next",
@@ -88,7 +98,11 @@ const Carrousel = () => {
                   }`}
                 >
                   {/* <img src={image} alt={`slide ${index}`} /> */}
-                  <LazyLoadImage src={image} alt={`slide ${index}`}  className="image"/>
+                  <LazyLoadImage
+                    src={image}
+                    alt={`slide ${index}`}
+                    className="image"
+                  />
                 </div>
               )}
             </SwiperSlide>

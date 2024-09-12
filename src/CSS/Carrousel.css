@@ -48,6 +48,9 @@
 
 .swiper-button-prev,
 .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 56px;
   height: 56px;
   border: none;
@@ -72,4 +75,63 @@
 
 .carrousel-work-btn {
   text-align: center;
+}
+/* Mobile styles for carousel */
+@media screen and (max-width: 768px) {
+  .carrousel-container {
+    margin: 1rem 0;
+    height: 300px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .swiper-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .swiper-slide {
+    border-radius: 15px;
+    width: 100%; /* Ensure each slide takes full width */
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 48px;
+    height: 48px;
+    background-color: #ff7e21;
+    opacity: 0.7;
+  }
+
+  .swiper-button-prev {
+    left: 10%;
+  }
+
+  .swiper-button-next {
+    right: 10%;
+  }
+
+  .carrousel-work-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Additional small screen adjustments */
+@media screen and (max-width: 500px) {
+  .carrousel-container {
+    margin-top: 2rem;
+    height: 250px;
+  }
+
+  .swiper-slide {
+    border-radius: 10px;
+    width: 100%; /* Ensure each slide takes full width */
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
 }
