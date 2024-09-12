@@ -282,7 +282,7 @@ video {
 }
 .devron-brand-text-small {
   font-family: "PP Editorial New", sans-serif;
-  font-weight:normal ;
+  font-weight: normal;
 }
 
 .brand-text {
@@ -383,5 +383,21 @@ video {
   }
   .hero {
     font-size: 3.8rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* responsive btns  */
+  .light-btn {
+    font-size: 20px; /* Adjust the font size */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    border-radius: 50px; /* Slightly smaller border radius */
+    margin-right: 1rem; /* Reduce margin */
+  }
+  .dark-btn{
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-right: 1rem;
+    border:1px solid #fff;
   }
 }
