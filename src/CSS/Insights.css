@@ -59,3 +59,13 @@
   
     align-self: flex-start;
   }
+
+  @media screen and (max-width:500px) {
+    .insights{
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    .insights h2{
+      font-size: 2rem;
+    }
+  }

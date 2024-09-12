@@ -14,15 +14,15 @@
   margin: 0 var(--margin-x);
 }
 
-.service-img-container {
+/* .service-img-container {
   position: relative;
 
-}
-.service-img {
+} */
+/* .service-img {
   display: block;
   width: 100%;
   height: auto;
-}
+} */
 .service-next-btn {
   position: absolute;
   top: 50%;
@@ -81,4 +81,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width:500px) {
+  .service{
+    margin: 1rem 0;
+  }
+  .service h2,.client h2{
+    font-size:2rem;
+  }
+  /* client styles */
+  .client{
+    padding: 1rem 0;
+    margin-top: 3rem;
+  }
+  .client h2{
+    text-align: center;
+    font-weight: 700;
+  }
+  .client p{
+    padding: 0 1rem;
+  }
+  .client-img-container{
+    grid-template-columns: 1fr 1fr;
+    gap:3rem
+  }
+  .image-box{
+    width: 100px;
+    height: 100px;
+  }
 }

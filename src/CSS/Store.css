@@ -27,3 +27,16 @@
 .store-text-container{
     margin-bottom: 2rem;
   }
+
+  @media screen and (max-width:500px) {
+    .store-preview{
+      height: 300px;
+      background-size:contain;
+    }
+    .last-grid-container img{
+      height: 100%;
+    }
+    .store-text p{
+      font-size: 28px;
+    }
+  }

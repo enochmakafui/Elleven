@@ -386,7 +386,7 @@ video {
   }
 }
 @media screen and (max-width: 500px) {
-  /* responsive btns  */
+  /* responsive buttons  */
   .light-btn {
     font-size: 20px; /* Adjust the font size */
     padding: 10px 20px; /* Adjust padding for smaller screens */
@@ -399,5 +399,16 @@ video {
     border-radius: 50px;
     margin-right: 1rem;
     border:1px solid #fff;
+  }
+  /* responsive video box */
+  .video-container{
+    height: 250px;
+  }
+  .video-container video{
+    height: 100%
+  }
+  video{
+    object-fit: cover;
+    border-radius: 10px;
   }
 }
