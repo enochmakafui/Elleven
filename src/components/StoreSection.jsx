@@ -25,10 +25,10 @@ const StoreSection = () => {
 
   return (
     <div className="store-preview">
-      <div>
+      <div className="first-grid-container" >
         <img src={firstImage} alt="laptop" />
       </div>
-      <div>
+      <div className="second-grid-container">
         <img src={secondImage} alt="picture frame" />
         <div className="last-grid-container">
           <img src={thirdImage} alt="picture frame" />
