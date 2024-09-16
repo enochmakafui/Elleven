@@ -62,10 +62,18 @@
 
   @media screen and (max-width:500px) {
     .insights{
-      margin-left: 2rem;
-      margin-right: 2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     .insights h2{
+      font-size: 2rem;
+    }
+    .insights-section{
+      flex-direction: column;
+      border-radius: 10px;
+      gap:1rem
+    }
+    .insights .title{
       font-size: 2rem;
     }
   }

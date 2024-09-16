@@ -393,22 +393,67 @@ video {
     border-radius: 50px; /* Slightly smaller border radius */
     margin-right: 1rem; /* Reduce margin */
   }
-  .dark-btn{
+  .dark-btn {
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 50px;
     margin-right: 1rem;
-    border:1px solid #fff;
+    border: 1px solid #fff;
   }
   /* responsive video box */
-  .video-container{
+  .video-container {
     height: 250px;
   }
-  .video-container video{
-    height: 100%
+  .video-container video {
+    height: 100%;
   }
-  video{
+  video {
     object-fit: cover;
     border-radius: 10px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Increase spacing between sections */
+    margin: 2rem 1rem;
+  }
+
+  .about-elleven h2 {
+    font-size: 36px; /* Increased font size for the title */
+    line-height: 44px;
+  }
+
+  .about-elleven p {
+    font-size: 16px; /* Increased font size for the paragraph */
+    line-height: 24px;
+    width: 100%; /* Ensure the paragraph takes full width */
+  }
+
+  .menu, .services, .about {
+    font-size: 16px; /* Increased font size for the list items */
+    gap: 12px; /* Slightly increased gap between list items */
+    line-height: 26px;
+  }
+
+  .menu p, .services p, .about p {
+    font-size: 20px; /* Increased font size for the section titles */
+    font-weight: 500; /* Added more weight for titles */
+  }
+
+  .social-media {
+    gap: 1.5rem; /* Slightly reduce the gap between social icons */
+    justify-content: center; /* Center align the social media icons */
+    order: 3; /* Move the social media section to the bottom */
+  }
+
+  .copyright {
+    order: 2; /* Move the copyright section before the social media section */
+    align-items: center; /* Center-align the copyright text */
+    text-align: center;
+    font-size: 14px; /* Slightly increased font size for the copyright */
+  }
+
+  .about {
+    order: 1; /* Ensure the "About Elleven" is placed before */
   }
 }

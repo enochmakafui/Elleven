@@ -42,4 +42,22 @@
     color: #121212;
     border: none;
   }
+
+  @media screen and (max-width:500px) {
+    .news-letter{
+      grid-template-columns: 1fr;
+      gap:2rem;
+      margin:1rem 2rem;
+    }
+    .news-letter p{
+      font-size: 24px;
+    }
+    .news-letter input{
+      /* width: 100%; */
+      /* border-radius: 10px; */
+    }
+    .subscribe-btn{
+      width: 100%;
+    }
+  }
   

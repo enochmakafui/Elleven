@@ -48,3 +48,16 @@
     font-weight: 300;
   }
   
+  @media screen and (max-width: 500px) {
+   .articles{
+    padding-left: 3rem;
+    padding-right: 3rem;
+   }
+    .articles h2{
+      font-size: 2rem;
+    }
+    .article-items{
+      grid-template-columns: 1fr;
+    }
+    
+  }
