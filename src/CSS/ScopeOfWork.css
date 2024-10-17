@@ -1,0 +1,41 @@
+  
+.head-text-container {
+    text-align: center;
+  }
+.service h2 {
+    font-size: 3rem;
+    text-align: center;
+   font-family:
+    SF Pro Display,
+    sans-serif;
+    font-weight: 400;
+    margin-top: var(--head-margin-top);
+    margin-bottom: var(--head-margin-bottom);
+  }
+  .service {
+    position: relative;
+    margin: 0 var(--margin-x);
+  }
+  
+  .service-next-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 96px;
+    height: 96px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .scope-of-work-card-container{
+    display: flex;
+    gap:2rem
+  }
+

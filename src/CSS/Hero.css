@@ -1,18 +1,20 @@
 .hero {
-  margin: 4rem var(--margin-x);
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  margin-left: var(--margin-x);
+  margin-right: var(--margin-x);
   letter-spacing: -1.92px;
   font-family: "PP Neue Montreal", sans-serif;
   font-style: normal;
 }
 .hero h2 {
-  margin: 0.5rem 0;
-  /* font-size: 96px; */
+  margin: 0.1rem 0;
   font-size: clamp(1.75rem, 1.3864rem + 5.8182vw, 5.75rem);
   line-height: 102px;
   font-weight: 400;
 }
 .hero-btn-container {
-  margin-top: 90px;
+  margin-top:2.5rem;
   display: flex;
 }
 
@@ -21,9 +23,6 @@
     margin: 2rem 2rem;
   }
   .hero h2 {
-    /* font-size: 48px; */
-    /* font-size: clamp(3rem, 2.75rem + 4vw, 5.75rem); */
-
     line-height: 50px;
   }
   .hero-btn-container{

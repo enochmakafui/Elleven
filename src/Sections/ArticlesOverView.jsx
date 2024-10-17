@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-import "../CSS/Article.css";
+import "../CSS/ArticleOverView.css";
 import firstImage from "../assets/images/Rectangle 306 (2).png";
 import secondImage from "../assets/images/Rectangle 306 (3).png";
 import thirdImage from "../assets/images/Rectangle 306 (4).png";
 import fouthImage from "../assets/images/Rectangle 306 (5).png";
 
-const Articles = () => {
+const ArticlesOverView = () => {
   const ref = useRef(null);
   const [isVisible, setIsvisible] = useState(false);
   const isInView = useInView(ref, { triggerOnce: true, threshold: 0.1 });
@@ -70,4 +70,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default ArticlesOverView;

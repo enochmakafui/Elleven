@@ -1,9 +1,8 @@
 .carrousel{
-  border-bottom: 1px solid white;
   padding-bottom: 3.5rem;
 }
 .carrousel-container {
-  margin: 15rem 0 5rem 0;
+  margin: 10rem 0 5rem 0;
   position: relative;
   width: 100%;
   height: 572px;
@@ -73,9 +72,6 @@
   right: 25%;
 }
 
-.carrousel-work-btn {
-  text-align: center;
-}
 /* Mobile styles for carousel */
 @media screen and (max-width: 768px) {
   .carrousel-container {

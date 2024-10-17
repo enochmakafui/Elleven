@@ -1,0 +1,185 @@
+.testimonial-swiper-container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonial {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #000;
+}
+
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 0;
+  font-size: 48px;
+  font-family: "SF Pro Display";
+}
+
+.testimonial .profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  align-self: flex-start;
+}
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.testimonial .profile-about {
+  font-family: "Helvetica Neue";
+}
+.profile-about p {
+  font-size: 1.6rem;
+  padding: 0;
+  margin-bottom: 0.2px;
+  font-weight: 400;
+  margin-top: 0;
+}
+.profile-about .role {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.next-profile-btn {
+  width: 76px;
+  height: 76px;
+  background-color: #ff7e21;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  position: absolute;
+  right: 40px;
+}
+.testimonial-card {
+  background-color: #121212;
+  padding: 2rem 3rem;
+  border-radius: 30px;
+}
+.testimonial-card h2 {
+  font-size: 3rem;
+  font-family: SF Pro Display, sans-serif;
+  font-weight: 700;
+
+}
+.testimonial-card-said{
+  font-family: PP Editorial New,sans-serif;
+  color: #ff7e21;
+  font-style: italic;
+  font-weight: 800;
+
+}
+.testimonial-card-head {
+  text-transform: uppercase;
+  background: #000;
+  padding: 1rem;
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  border-radius: 30px;
+  width: max-content;
+  margin-bottom: 1rem;
+}
+.testimonial-card-text{
+  font-size: 1.7rem;
+}
+.testimonial .swiper-container {
+  position: relative;
+}
+.swiper-pagination {
+  position: absolute; /* Ensure it is positioned relative to the slider */
+  bottom: -20px; /* Move it down by 20px */
+  left: 0;
+  width: 100%;
+  text-align: center; /* Center the bullets horizontally */
+}
+
+/* Change default color of pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #ccc;
+  opacity: 1
+}
+
+/* Change color of the active pagination bullet */
+.swiper-pagination-bullet-active {
+  background-color: #D9D9D9; 
+  opacity: 1; 
+}
+
+/* Optional: Modify size of pagination bullets */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+
+
+.testimonial-button-prev,
+.testimonial-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #ff7e21;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.testimonial-button-prev {
+  left: 16%;
+}
+
+.testimonial-button-next {
+  right: 16%;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .testimonial {
+    padding: 1rem 0;
+  }
+  .testimonial h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .testimonial p {
+    font-size: 28px;
+  }
+  .next-profile-btn {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    right: 8px;
+  }
+  .testimonial .profile-about {
+    gap: 0.2rem;
+  }
+  .profile-about p {
+    font-size: 24px;
+  }
+  .profile-about .role {
+    font-size: 20px;
+  }
+  .testimonial img {
+    width: 50px;
+    height: 50px;
+  }
+}

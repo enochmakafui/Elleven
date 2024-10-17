@@ -1,0 +1,61 @@
+.insights{
+  margin: 0 var(--margin-x);
+}
+.insight-head{
+    font-size: 48px;
+    font-family:
+    SF Pro Display,
+    sans-serif;
+    text-align: center;
+    font-weight: 400;
+    margin-top: var(--head-margin-top);
+  margin-bottom: var(--head-margin-bottom);
+  }
+  .insights-section{
+    display: flex;
+    font-family: SF Pro Display, sans-serif;
+
+    font-size: 20px;
+    font-weight:400;
+    justify-content: space-between;
+    background-color: #383838CC;
+    gap:5rem;
+  }
+  .insights-text-box{
+    width: 60%;
+    margin-top:1.5rem;
+    margin-left: 4rem;
+    margin-bottom: 7rem;
+  }
+  .insights-text-box h2{
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 4.5rem;
+  }
+  .insights-text-box p{
+    font-size: 2rem;
+    font-style: italic;
+  }
+  .insights img{
+    width: 40%;;
+  }
+ 
+  
+
+  @media screen and (max-width:500px) {
+    .insights{
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .insights h2{
+      font-size: 2rem;
+    }
+    .insights-section{
+      flex-direction: column;
+      border-radius: 10px;
+      gap:1rem
+    }
+    .insights .title{
+      font-size: 2rem;
+    }
+  }

@@ -1,41 +1,24 @@
-import { useState, useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+// import { useState, useEffect, useRef } from "react";
+// import { motion, useInView } from "framer-motion";
 import "../CSS/NewsLetter.css";
 import ButtonLight from "./ButtonLight";
 const NewsLetter = () => {
-  const ref = useRef(null);
-  const [isVisible, setIsvisible] = useState(false);
-  const isInView = useInView(ref, { triggerOnce: true, threshold: 0.1 });
-
-  useEffect(() => {
-    if (isInView) {
-      setIsvisible(true);
-    }
-  }, [isInView]);
-
-  const variants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 },
-  };
+  // const ref = useRef(null);
+  // const [isVisible, setIsvisible] = useState(false);
+  // const isInView = useInView(ref, { triggerOnce: true, threshold: 0.1 });
 
   return (
-    <motion.div
-      className="news-letter"
-      ref={ref}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={variants}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="news-letter">
       <div>
-        <p>Subscribe to our newsletter to get </p>
-        <p>latest news in your inbox.</p>
+        <p>
+          Subscribe to our newsletter to <br /> get latest news in your inbox.
+        </p>
       </div>
       <form action="">
-        <input type="email" placeholder="enter your email" />
+        <input type="email" placeholder="Enter your email" required />
       </form>
       <ButtonLight>Subscribe</ButtonLight>
-    </motion.div>
+    </div>
   );
 };
 

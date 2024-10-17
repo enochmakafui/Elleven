@@ -1,27 +1,25 @@
-import Hero from "../components/Hero";
-import FlowContainer from "../components/FlowContainer";
+import Hero from "../Sections/Hero";
+import ScrollingSlider from "../components/ScrollingSlider";
 import Carrousel from "../components/Carrousel";
-import Service from "../components/Service";
-import Client from "../components/Client";
-import Testimonial from "../components/Testimonial";
-import StoreSection from "../components/StoreSection";
-import Insights from "../components/Insights";
-import Articles from "../components/Articles";
-import NewsLetter from "../components/NewsLetter";
+import ScopeOfWork from "../Sections/ScopeOfWork";
+import ClientsWeServe from "../Sections/ClientsWeServe";
+import TestimonialSection from "../Sections/TestimonialSection";
+import StoreShowCase from "../Sections/StoreShowCase";
+import InsightsFromUs from "../Sections/InsightsFromUs";
+import ArticlesOverView from "../Sections/ArticlesOverView";
 const HomePage = () => {
   return (
-    <main>
+    <>
       <Hero />
-      <FlowContainer />
+      <ScrollingSlider />
       <Carrousel />
-      <Service />
-      <Client />
-      <Testimonial />
-      <StoreSection />
-      <Insights />
-      <Articles />
-      <NewsLetter />
-    </main>
+      <ScopeOfWork />
+      <ClientsWeServe />
+      <TestimonialSection />
+      <StoreShowCase />
+      <InsightsFromUs />
+      <ArticlesOverView />
+    </>
   );
 };
 

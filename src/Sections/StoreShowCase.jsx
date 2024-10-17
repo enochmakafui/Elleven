@@ -3,10 +3,10 @@ import { motion, useInView } from "framer-motion";
 import firstImage from "../assets/images/Rectangle 302.png";
 import secondImage from "../assets/images/Rectangle 303.png";
 import thirdImage from "../assets/images/Rectangle 304.png";
-import "../CSS/Store.css";
-import ButtonLight from "./ButtonLight";
+import "../CSS/StoreShowCase.css";
+import ButtonLight from "../components/ButtonLight";
 
-const StoreSection = () => {
+const StoreShowCase = () => {
   const ref = useRef(null);
   const [storeIsVisible, setStoreIsVisible] = useState(false);
 
@@ -25,7 +25,7 @@ const StoreSection = () => {
 
   return (
     <div className="store-preview">
-      <div className="first-grid-container" >
+      <div className="first-grid-container">
         <img src={firstImage} alt="laptop" />
       </div>
       <div className="second-grid-container">
@@ -60,4 +60,4 @@ const StoreSection = () => {
   );
 };
 
-export default StoreSection;
+export default StoreShowCase;

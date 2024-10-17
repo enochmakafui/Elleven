@@ -1,0 +1,102 @@
+/* footer */
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-left: var(--margin-x);
+    margin-right: 2rem;
+  }
+  .about-elleven h2 {
+    color: #ff7e21;
+    font-size: 48px;
+    font-weight: 800;
+    /* line-height: 30px; */
+
+    font-family: "PP Editorial New", sans-serif;
+  }
+  .about-elleven p {
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.32px;
+    font-style: normal;
+    font-size: 18px;
+    font-family: "Helvetica Neue", sans-serif;
+    /* width: 60%; */
+  }
+  .menu {
+    list-style: none;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    font-size: 17px;
+    /* letter-spacing: -0.32px; */
+    /* line-height: 30px; */
+    font-weight: 400;
+    gap: 14px;
+    font-style: normal;
+    font-family: "Helvetica Neue", sans-serif;
+    margin-top: 0;
+    height: auto;
+  }
+  .menu p {
+    color: #ff7e21;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .services {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 17px;
+    letter-spacing: -0.32px;
+    line-height: 30px;
+    font-weight: 400;
+    gap: 14px;
+    font-style: normal;
+    font-family: "Helvetica Neue", sans-serif;
+    margin-top: 0;
+
+  }
+  .services p {
+    color: #ff7e21;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .footer .about {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 17px;
+    letter-spacing: -0.32px;
+    line-height: 30px;
+    font-weight: 400;
+    gap: 14px;
+    font-style: normal;
+    font-family: "Helvetica Neue", sans-serif;
+    margin-top: 0;
+
+  }
+  .footer .about p {
+    color: #ff7e21;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .footer .social-media {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .copyright {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Helvetica Neue", sans-serif;
+    margin-bottom: 1rem;
+  }

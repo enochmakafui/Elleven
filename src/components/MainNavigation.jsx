@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
+import { ShoppingCart } from "lucide-react";
 import { NavLink } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
 import DropItem from "./DropItem";
 import "../CSS/Nav.css";
-import ButtonLight from "./ButtonLight";
-import ButtonDark from "./ButtonDark";
 
 const MainNavigation = () => {
   const [isExpanded, setExpanded] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   // mobile scroll for small svg
 
-  // haburger menu
-  const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
-  const [burger_menu_class, setBurgerMenuClass] = useState("burger-menu");
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  // hamburger menu
+  // const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
+  // const [burger_menu_class, setBurgerMenuClass] = useState("burger-menu");
+  // const [isMenuOpen, setMenuOpen] = useState(false);
 
+  let timeOutId;
   const dropDownYes = () => {
+    clearTimeout(timeOutId);
     setExpanded(true);
   };
   const dropDownNo = () => {
-    setExpanded(false);
+    timeOutId = setTimeout(() => {
+      setExpanded(false);
+    }, 300);
   };
 
   const handleScroll = () => {
@@ -31,17 +33,17 @@ const MainNavigation = () => {
     }
   };
 
-  const handleToggleBurgerMenu = () => {
-    if (burger_class === "burger-bar unclicked") {
-      setBurgerClass("burger-bar clicked");
-      setBurgerMenuClass("burger-menu clicked");
-      setMenuOpen(true);
-    } else {
-      setBurgerClass("burger-bar unclicked");
-      setMenuOpen(false);
-      setBurgerMenuClass("burger-menu");
-    }
-  };
+  // const handleToggleBurgerMenu = () => {
+  //   if (burger_class === "burger-bar unclicked") {
+  //     setBurgerClass("burger-bar clicked");
+  //     setBurgerMenuClass("burger-menu clicked");
+  //     setMenuOpen(true);
+  //   } else {
+  //     setBurgerClass("burger-bar unclicked");
+  //     setMenuOpen(false);
+  //     setBurgerMenuClass("burger-menu");
+  //   }
+  // };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -51,91 +53,50 @@ const MainNavigation = () => {
   }, []);
 
   return (
-    <nav className={scrolled ? "scrolled" : ""}>
-      <h1>
-        <NavLink to="/"> Elleven</NavLink>
-      </h1>
-      <ul className={isMenuOpen ? "menu-open" : "menu-not-open"}>
-        <li>
-          <NavLink className="navlinks">Our Story </NavLink>
+    <nav className={scrolled?"scrolled":""}>
+      <div className="nav__logo">
+        <NavLink to="/">
+          <h1>Elleven</h1>
+        </NavLink>
+      </div>
+      <ul className="nav__links">
+        <li className="nav__item">
+          <NavLink className="nav__link">Our Story </NavLink>
         </li>
-        <li>
+        <li className="nav__item">
           <NavLink
-            style={{ position: "relative" }}
-            className="navlinks"
+            className="nav__link test"
             onMouseOver={dropDownYes}
             onMouseLeave={dropDownNo}
           >
-            Our Work
-            <button className="dropdown-button">
-              <motion.svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-                className="dropdown-icon"
-                animate={{ rotate: isExpanded ? 180 : 0 }}
+            <button className="nav__link--btn">
+              Our Works
+              <svg
+                aria-hidden="true"
+                height="16"
+                viewBox="0 0 16 16"
+                version="1.1"
+                width="16"
               >
-                <path
-                  d="M18 10.5L12 16.5L6 10.5"
-                  stroke={scrolled ? "black" : "white"}
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </motion.svg>
+                <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+              </svg>
             </button>
-            <AnimatePresence>
-              {!isMenuOpen && isExpanded && <DropItem />}
-            </AnimatePresence>
+            {isExpanded && <DropItem />}
           </NavLink>
         </li>
-        <li className="mobile-drop">
-          {isMenuOpen && (
-            <div className="mobile-drop-item ">
-              <li>
-                <NavLink to="/brand">Branding</NavLink>
-              </li>
-              <li>Web & App Design</li>
-              <li>Marketting</li>
-            </div>
-          )}
-        </li>
-        <li>
-          <NavLink className="navlinks">Store </NavLink>
-        </li>
-        <li>
-          <NavLink className="navlinks">Blog</NavLink>{" "}
-        </li>
-        <li>
-          <NavLink>
-            {scrolled ? (
-              <ButtonDark
-                style={{
-                  // padding: "10px 25px",
-                  fontSize: "20px",
-                }}
-              >
-                Start a Project
-              </ButtonDark>
-            ) : (
-              <ButtonLight
-                style={{
-                  // padding: "10px 25px",
-                  fontSize: "20px",
-                }}
-              >
-                Start a Project
-              </ButtonLight>
-            )}
+        <li className="nav__item">
+          <NavLink className="nav__link nav__link--store">
+            Store 
+            <ShoppingCart className="shopping-cart-icon"/>
           </NavLink>
+        </li>
+        <li className="nav__item">
+          <NavLink className="nav__link">Blog</NavLink>
+        </li>
+        <li className="nav__item ">
+          <NavLink className="nav__link nav__link--start-project" >Start a Project</NavLink>
         </li>
       </ul>
-      <div className={burger_menu_class} onClick={handleToggleBurgerMenu}>
-        <div className={burger_class}></div>
-        <div className={burger_class}></div>
-      </div>
     </nav>
   );
 };

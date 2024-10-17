@@ -1,9 +1,8 @@
 
 .flow-container {
-    /* overflow: hidden; */
     width: 100%;
-    margin: 5rem 0;
-    padding: 1rem 0 1rem 0;
+    margin: 1rem 0;
+    padding: 0.5rem  0;
     transform: rotate(-9.79deg);
     border-top: 1.045px solid #fff;
     border-bottom: 1.045px solid #fff;

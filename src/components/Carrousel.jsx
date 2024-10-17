@@ -4,12 +4,12 @@ import { useRef, useState, useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../CSS/Carrousel.css";
 import "swiper/css";
+
 import { Navigation, Autoplay } from "swiper/modules";
 
 import callCareImage from "../assets/images/call2care.png";
 import menSmileImage from "../assets/images/men-smile.png";
 import menPoseImage from "../assets/images/men-pose.png";
-import ButtonLight from "./ButtonLight";
 
 const Images = [
   callCareImage,
@@ -22,15 +22,12 @@ const Images = [
 
 const Carrousel = () => {
   const carrouselRef = useRef(null);
-  const btnRef = useRef(null);
   const CarrousselInView = useInView(carrouselRef, {
     triggerOnce: true,
     threshold: 0.1,
   });
-  const btnInView = useInView(btnRef, { triggerOnce: true, threshold: 0.1 });
 
   const [carrouselVisible, setCarrouselVisible] = useState(false);
-  const [buttonVisible, setButtonVisible] = useState(false);
 
   useEffect(() => {
     if (CarrousselInView) {
@@ -38,11 +35,7 @@ const Carrousel = () => {
     }
   }, [CarrousselInView]);
 
-  useEffect(() => {
-    if (btnInView) {
-      setButtonVisible(true);
-    }
-  }, [btnInView]);
+
 
   const variants = {
     hidden: { opacity: 0, y: 100 },
@@ -137,16 +130,7 @@ const Carrousel = () => {
           </svg>
         </button>
       </motion.div>
-      <motion.div
-        className="carrousel-work-btn"
-        ref={btnRef}
-        initial="hidden"
-        animate={buttonVisible ? "visible" : "hidden"}
-        variants={variants}
-        transition={{ duration: 0.5 }}
-      >
-        <ButtonLight> See all our works</ButtonLight>
-      </motion.div>
+     
     </div>
   );
 };

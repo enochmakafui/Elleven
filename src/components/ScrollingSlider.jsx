@@ -1,5 +1,5 @@
 import Marquee from "react-fast-marquee";
-import "../CSS/FlowSlider.css"
+import "../CSS/ScrollingSlider.css"
 const SLIDES = [
   "BRAND STRATEGY & IDENTITY",
   "UI/UX DESIGN",
@@ -8,13 +8,12 @@ const SLIDES = [
   "SOCIAL MEDIA",
 ];
 
-const FlowContainer = () => {
+const ScrollingSlider = () => {
   return (
     <div
       className="flow-container"
-      style={{ overflow: "hidden", whiteSpace: "nowrap", display: "flex" }}
     >
-      <Marquee>
+      <Marquee speed={50} pauseOnHover={true} gradient={false}>
         {SLIDES.map((slide, index) => (
           <div key={index} className="slide">
             <span>
@@ -43,4 +42,4 @@ const FlowContainer = () => {
   );
 };
 
-export default FlowContainer;
+export default ScrollingSlider;
